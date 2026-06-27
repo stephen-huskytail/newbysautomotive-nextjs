@@ -295,6 +295,69 @@ export function getService(slug: string) {
   return services.find((s) => s.slug === slug);
 }
 
+// Primary navigation
+export const nav = [
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "Reviews", href: "/reviews" },
+  { label: "Specials", href: "/specials" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+] as const;
+
+// 4-step "How It Works" (required by site-build-standard)
+export const process = [
+  {
+    step: "1",
+    title: "Call or Request Online",
+    body: "Call us or send a quick appointment request. Tell us what's going on with your vehicle — no pressure, no runaround.",
+  },
+  {
+    step: "2",
+    title: "Honest Diagnosis",
+    body: "Our ASE-certified techs inspect your vehicle and pinpoint the real problem using professional diagnostic tools.",
+  },
+  {
+    step: "3",
+    title: "You Approve the Work",
+    body: "We explain exactly what's needed and what it costs — in plain English — before we touch a thing. Your call.",
+  },
+  {
+    step: "4",
+    title: "Drive Away Confident",
+    body: "We fix it right the first time, backed by nationwide warranty, and get you back on the road.",
+  },
+] as const;
+
+// FAQs — feed FAQPage schema (required by site-build-standard) and the on-page
+// FAQ section. Targets the questions Henderson drivers actually search.
+export const faqs = [
+  {
+    q: "Where is Newby's Automotive located?",
+    a: "We're at 1201 American Pacific Dr in Henderson, NV 89074, serving Henderson, Green Valley, Anthem, Seven Hills, Boulder City and the greater Las Vegas valley.",
+  },
+  {
+    q: "Do you work on all makes and models?",
+    a: "Yes. Newby's services all makes, models and years — domestic and import, cars and trucks. We're a true one-stop, full-service shop.",
+  },
+  {
+    q: "Are your technicians certified?",
+    a: "Absolutely. Our technicians are ASE-certified, and we're NAPA-affiliated, AAA-accredited and BBB-rated. Most work and parts are backed by a nationwide warranty.",
+  },
+  {
+    q: "Do I need an appointment, or can I just call?",
+    a: "Calling is the fastest way to get scheduled — (702) 897-9667. You can also send an appointment request through this site and we'll get right back to you. Walk-ins are welcome when the schedule allows.",
+  },
+  {
+    q: "How much will my repair cost?",
+    a: "We diagnose the real problem first, then give you a clear, upfront estimate before any work begins. You always approve the cost before we start — no surprises.",
+  },
+  {
+    q: "What are your hours?",
+    a: "We're open Monday through Friday, 8:00 AM to 5:00 PM. We're closed weekends.",
+  },
+] as const;
+
 // ── Customer testimonials ────────────────────────────────────────────────────
 // NOTE FOR HANDOFF: these are representative summaries drawn from Newby's
 // verified-review themes (honesty, fair pricing, no upselling, fast turnaround).
