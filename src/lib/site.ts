@@ -311,9 +311,18 @@ export const nav = [
   { label: "Services", href: "/services" },
   { label: "Reviews", href: "/reviews" },
   { label: "Specials", href: "/specials" },
+  { label: "Car Care Tips", href: "/car-care-tips" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ] as const;
+
+// Social / review-profile links (icons rendered in header + footer)
+export const socialLinks = [
+  { label: "Facebook", href: site.social.facebook, icon: "facebook" as const },
+  { label: "Google", href: site.reviews.googleUrl, icon: "google" as const },
+  { label: "Yelp", href: site.reviews.yelpUrl, icon: "yelp" as const },
+  { label: "SureCritic", href: site.reviews.sureCriticUrl, icon: "surecritic" as const },
+];
 
 // 4-step "How It Works" (required by site-build-standard)
 export const process = [

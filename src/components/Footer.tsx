@@ -3,6 +3,7 @@ import { site, nav, services } from "@/lib/site";
 import { Logo } from "./Logo";
 import { PhoneIcon, PinIcon, ClockIcon } from "./icons";
 import { Stars } from "./Stars";
+import { SocialLinks } from "./SocialLinks";
 
 export function Footer() {
   return (
@@ -19,6 +20,7 @@ export function Footer() {
               {site.reviews.rating} · {site.reviews.count.toLocaleString()} reviews
             </span>
           </div>
+          <SocialLinks variant="ghost" className="mt-5" />
         </div>
 
         <div>
@@ -49,6 +51,11 @@ export function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link href="/careers" className="hover:text-white">
+                Careers
+              </Link>
+            </li>
           </ul>
         </div>
 

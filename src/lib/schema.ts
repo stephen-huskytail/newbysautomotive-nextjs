@@ -82,6 +82,27 @@ export function serviceSchema(name: string, description: string, slug: string) {
   };
 }
 
+export function articleSchema(a: {
+  title: string;
+  excerpt: string;
+  slug: string;
+  date: string;
+  photo: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: a.title,
+    description: a.excerpt,
+    datePublished: a.date,
+    image: `${site.url}${a.photo}`,
+    url: `${site.url}/car-care-tips/${a.slug}`,
+    author: { "@type": "Organization", name: site.name },
+    publisher: { "@id": ORG_ID },
+    mainEntityOfPage: `${site.url}/car-care-tips/${a.slug}`,
+  };
+}
+
 export function breadcrumbSchema(items: { name: string; path: string }[]) {
   return {
     "@context": "https://schema.org",

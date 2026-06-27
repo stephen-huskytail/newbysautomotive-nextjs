@@ -38,10 +38,10 @@ export default function AboutPage() {
       <section className="py-14 sm:py-16">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2">
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-[var(--shadow-card)]">
-            {/* PLACEHOLDER: swap for a real photo of Conley Newby / the team / the shop */}
+            {/* PLACEHOLDER: swap for a real photo of the shop / team */}
             <Image
-              src="/photos/mechanic-clipboard.webp"
-              alt="A Newby's Automotive technician ready to help in Henderson, NV"
+              src="/photos/customer-keys.webp"
+              alt="A happy Newby's Automotive customer in Henderson, NV"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
@@ -74,6 +74,46 @@ export default function AboutPage() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* About the Owner */}
+      <section className="bg-brand-navy py-14 sm:py-16">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-[var(--shadow-card)]">
+            {/* PLACEHOLDER: swap for a real photo of Conley Newby */}
+            <Image
+              src="/photos/mechanic-clipboard.webp"
+              alt="Conley Newby, owner of Newby's Automotive Center"
+              fill
+              sizes="(max-width: 1024px) 100vw, 45vw"
+              className="object-cover"
+            />
+          </div>
+          <div>
+            <p className="text-sm font-bold uppercase tracking-widest text-brand-red-light">
+              About the Owner
+            </p>
+            <h2 className="mt-2 text-4xl font-extrabold text-white">Conley Newby</h2>
+            <div className="mt-5 space-y-4 text-white/80">
+              <p>
+                It started with a young boy growing up in Las Vegas with a fascination for cars. As a
+                local businessman, Conley Newby earned the right qualifications and ran two automotive
+                franchises — including an AAMCO Transmissions franchise from 1985 to 2000 — before
+                deciding to go out on his own. That&rsquo;s how Newby&rsquo;s Automotive Center was born.
+              </p>
+              <p>
+                Through Conley&rsquo;s hard work and dedication, Newby&rsquo;s has grown into one of the
+                most respected auto repair garages in Henderson, NV, delivering exemplary service year
+                after year.
+              </p>
+              <p>
+                Conley&rsquo;s son-in-law also works at the shop, keeping it a true family-run business.
+                When he&rsquo;s not working, you&rsquo;ll find Conley supporting his local church. His
+                motto says it all: <span className="font-semibold text-white">quality work at fair prices, and treating you like family.</span>
+              </p>
+            </div>
           </div>
         </div>
       </section>

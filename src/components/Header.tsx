@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { site, nav } from "@/lib/site";
 import { Logo } from "./Logo";
+import { SocialLinks } from "./SocialLinks";
 import { PhoneIcon, ClockIcon, PinIcon } from "./icons";
 
 export function Header() {
@@ -15,7 +16,8 @@ export function Header() {
       <div className="hidden bg-brand-navy text-white/85 md:block">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-1.5 text-[0.8rem]">
           <div className="flex items-center gap-5">
-            <span className="inline-flex items-center gap-1.5">
+            <SocialLinks variant="ghost" size={13} buttonClassName="h-6 w-6" />
+            <span className="hidden items-center gap-1.5 lg:inline-flex">
               <PinIcon size={14} /> {site.address.full}
             </span>
             <span className="inline-flex items-center gap-1.5">
