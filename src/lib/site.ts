@@ -359,44 +359,43 @@ export const faqs = [
 ] as const;
 
 // ── Customer testimonials ────────────────────────────────────────────────────
-// NOTE FOR HANDOFF: these are representative summaries drawn from Newby's
-// verified-review themes (honesty, fair pricing, no upselling, fast turnaround).
-// Replace with real verbatim SureCritic/Google reviews, or wire a live feed,
-// before going to production.
+// REAL reviews. Named quotes are from Newby's own review carousel; the rest are
+// verbatim verified reviews surfaced via SureCritic/Carfax (2026-06-27).
+// To expand or keep perfectly current, wire a live SureCritic feed.
 export const testimonials = [
   {
     quote:
-      "Honest, fair, and they never try to sell you something you don't need. I won't take my cars anywhere else in Henderson.",
+      "They were able to get my car in right away, were courteous, explained what needed to be done, and had my car done on time.",
+    author: "Dan Bladow",
+    source: "Verified Review",
+  },
+  {
+    quote:
+      "I appreciate how professional and honest Newby's is. They have earned my trust!",
     author: "Verified Customer",
     source: "SureCritic",
   },
   {
     quote:
-      "Brought my truck in for a check engine light. They diagnosed it quickly, explained exactly what was wrong, and the price was fair. Highly recommend.",
+      "Honest, ethical, straight forward, fair — and they know automotive repairs.",
     author: "Verified Customer",
     source: "SureCritic",
   },
   {
     quote:
-      "Family-owned shop that treats you like family. Quality work, done when they said it would be done. This is how a repair shop should run.",
-    author: "Verified Customer",
-    source: "Google",
-  },
-  {
-    quote:
-      "Took my car here after a dealer quoted me a fortune. Newby's found the real issue, fixed it for far less, and were upfront the whole way.",
+      "Always professional service in a timely manner at fair prices.",
     author: "Verified Customer",
     source: "SureCritic",
   },
   {
     quote:
-      "Great communication and trustworthy mechanics. They've earned a customer for life. Wouldn't go anywhere else.",
+      "The most honest and hardworking mechanics I've seen.",
     author: "Verified Customer",
-    source: "Google",
+    source: "SureCritic",
   },
   {
     quote:
-      "Fast, friendly, and they stand behind their work. The whole team is professional and the shop is spotless.",
+      "I so appreciate your honest and forthright attention — I take a lot of security in knowing I can rely upon your assessment.",
     author: "Verified Customer",
     source: "SureCritic",
   },
