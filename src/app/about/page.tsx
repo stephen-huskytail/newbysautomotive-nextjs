@@ -4,6 +4,7 @@ import { site } from "@/lib/site";
 import { PageHeader } from "@/components/PageHeader";
 import { TrustBar } from "@/components/TrustBar";
 import { CTASection } from "@/components/CTASection";
+import { MakesSection } from "@/components/MakesSection";
 import { CheckIcon } from "@/components/icons";
 
 export const revalidate = 86400;
