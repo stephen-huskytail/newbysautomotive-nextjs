@@ -291,6 +291,16 @@ export const serviceCategories = Array.from(
   new Set(services.map((s) => s.category)),
 );
 
+// Every make Newby's services (from the existing site's About page). Reinforces
+// the "all makes & models" positioning and adds brand keywords for SEO.
+export const makes = [
+  "Acura", "Audi", "BMW", "Buick", "Cadillac", "Chevrolet", "Chrysler", "Dodge",
+  "Fiat", "Ford", "GMC", "Honda", "Hyundai", "Infiniti", "Jaguar", "Jeep", "Kia",
+  "Land Rover", "Lexus", "Lincoln", "Mazda", "Mercedes", "Mercury", "MINI",
+  "Mitsubishi", "Nissan", "Oldsmobile", "Pontiac", "Porsche", "Ram", "Saab",
+  "Saturn", "Scion", "Smart", "Subaru", "Suzuki", "Toyota", "Volkswagen", "Volvo",
+] as const;
+
 export function getService(slug: string) {
   return services.find((s) => s.slug === slug);
 }
