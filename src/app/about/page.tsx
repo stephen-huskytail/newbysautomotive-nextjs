@@ -97,6 +97,8 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <MakesSection dark />
+
       <CTASection />
     </>
   );
