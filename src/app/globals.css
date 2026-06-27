@@ -1,26 +1,64 @@
 @import "tailwindcss";
 
+/* ── Brand tokens ──────────────────────────────────────────────────────────
+   Pulled directly from Newby's existing site:
+   primary red #BA0000, deep blue #0C00A3. */
+@theme {
+  --color-brand-red: #ba0000;
+  --color-brand-red-dark: #8f0000;
+  --color-brand-red-light: #e11616;
+
+  --color-brand-blue: #0c00a3;
+  --color-brand-navy: #0a0e2a;
+  --color-brand-navy-light: #141a44;
+
+  --color-ink: #15161b;
+  --color-steel: #5b6472;
+  --color-mist: #f4f6fa;
+  --color-line: #e4e8ef;
+
+  --font-display: var(--font-display), "Arial Black", sans-serif;
+  --font-sans: var(--font-sans), system-ui, sans-serif;
+
+  --shadow-card: 0 1px 2px rgba(16, 24, 40, 0.04), 0 8px 24px rgba(16, 24, 40, 0.08);
+  --shadow-cta: 0 8px 24px rgba(186, 0, 0, 0.28);
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: var(--color-ink);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  scroll-margin-top: 6rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+/* Subtle dark gradient used on hero overlay + CTA bands */
+.bg-navy-gradient {
+  background:
+    radial-gradient(120% 120% at 80% -10%, rgba(186, 0, 0, 0.22), transparent 55%),
+    linear-gradient(180deg, var(--color-brand-navy) 0%, #07091c 100%);
+}
+
+.text-balance {
+  text-wrap: balance;
 }
