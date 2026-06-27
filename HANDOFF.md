@@ -46,10 +46,8 @@ Also: "We service all makes & models" brand list (Acura…Volvo) on Services + A
 ---
 
 ## ⚠️ PLACEHOLDERS — replace before production
-1. **Testimonials** (`src/lib/site.ts` → `testimonials`): representative summaries based on the
-   review themes. Swap for real verbatim SureCritic/Google quotes (or wire a live feed).
-2. **Owner/team photo** (`/about`): currently a stock mechanic photo. Replace with a real photo of
-   Conley Newby / the team / the shopfront.
+1. **Testimonials** (`src/lib/site.ts` → `testimonials`): ✅ now REAL verified reviews (named + SureCritic). Optionally wire a live SureCritic feed to keep them current.
+2. **Photos of Conley / the shop / the team** (`/about` owner section + intro): still using stock photos — there were NO real owner/shop photos on the old site to pull. Need actual photos from Conley to swap in (search `PLACEHOLDER` in `src/app/about/page.tsx`).
 3. **Specials** (`src/app/specials/page.tsx`): the $39.95 alignment check is from the old site;
    confirm all offer amounts/terms with Conley.
 4. **Address suite:** old site sometimes listed "Suite E." Confirm correct NAP and update
