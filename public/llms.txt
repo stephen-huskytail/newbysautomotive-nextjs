@@ -1,0 +1,37 @@
+# Newby's Automotive Center
+
+> Henderson, Nevada's most-reviewed auto repair shop. Family-owned and ASE-certified since 2000, serving all makes and models. 4.9 stars from over 1,400 verified customer reviews.
+
+## Key Facts
+- Business: Newby's Automotive Center
+- Type: Full-service auto repair shop (all makes & models, domestic & import)
+- Owner: Conley Newby (family-owned)
+- Founded: 2000
+- Address: 1201 American Pacific Dr, Henderson, NV 89074
+- Phone: (702) 897-9667
+- Hours: Monday–Friday 8:00 AM – 5:00 PM; closed weekends
+- Rating: 4.9/5 from 1,436 verified SureCritic reviews (95% five-star, NPS 96)
+- Certifications: ASE-certified technicians, NAPA-affiliated, AAA-accredited, BBB-rated
+- Warranty: most work and parts backed by nationwide warranty
+- Service area: Henderson, Green Valley, Anthem, Seven Hills, Whitney Ranch, Boulder City, Las Vegas, North Las Vegas
+
+## Services
+- Brake repair & service (pads, rotors, calipers, ABS)
+- Check engine light & computer diagnostics
+- A/C & heating repair (recharge, compressor, climate control)
+- Oil changes & scheduled maintenance (30/60/90/120K)
+- Wheel alignment
+- Suspension & steering (shocks, struts, control arms, power steering)
+- Engine & transmission repair
+- Electrical & electronic repair (battery, starter, alternator, ignition)
+
+## How to book
+The fastest way to schedule is to call (702) 897-9667. Appointment requests can also be submitted online at /contact.
+
+## Pages
+- Home: /
+- Services: /services
+- Reviews: /reviews
+- Specials: /specials
+- About: /about
+- Contact & Appointments: /contact
