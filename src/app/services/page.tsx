@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { services, serviceCategories, site } from "@/lib/site";
+import { services, site } from "@/lib/site";
 import { ServiceCard } from "@/components/ServiceCard";
 import { PageHeader } from "@/components/PageHeader";
 import { CTASection } from "@/components/CTASection";
 import { TrustBar } from "@/components/TrustBar";
+import { MakesSection } from "@/components/MakesSection";
 
 export const revalidate = 86400;
 
@@ -27,20 +28,25 @@ export default function ServicesPage() {
         ]}
       />
 
-      {serviceCategories.map((cat) => (
-        <section key={cat} className="py-12 first:pt-16">
-          <div className="mx-auto max-w-7xl px-6">
-            <h2 className="text-2xl font-extrabold text-ink">{cat}</h2>
-            <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {services
-                .filter((s) => s.category === cat)
-                .map((s) => (
-                  <ServiceCard key={s.slug} service={s} />
-                ))}
-            </div>
+      <section className="py-16">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((s) => (
+              <ServiceCard key={s.slug} service={s} />
+            ))}
           </div>
-        </section>
-      ))}
+          <p className="mx-auto mt-10 max-w-2xl text-center text-steel">
+            Need something not listed here? From exhaust and cooling systems to fleet service and
+            safety inspections, we do it all.{" "}
+            <a href={`tel:${site.phone.tel}`} className="font-bold text-brand-red">
+              Call {site.phone.display}
+            </a>{" "}
+            and just ask.
+          </p>
+        </div>
+      </section>
+
+      <MakesSection dark />
 
       <section className="border-y border-line bg-mist py-12">
         <div className="mx-auto max-w-7xl px-6">
