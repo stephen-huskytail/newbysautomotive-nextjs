@@ -16,13 +16,17 @@ logo, and badges are hosted locally in `/public`.
 
 ## Pages
 - `/` Home — hero, trust badges, why-us, all 8 services, 4-step process, work gallery, reviews, FAQ, CTA
-- `/services` — services hub grouped by category
+- `/services` — services hub (single unified grid)
 - `/services/[slug]` — 8 individual SEO service pages (brakes, check-engine, A/C, oil/maintenance, alignment, suspension, engine/transmission, electrical)
-- `/reviews` — review stats + testimonials, links to SureCritic + Google
+- `/reviews` — review stats + real verified testimonials, links to SureCritic + Google
 - `/specials` — coupon/offer cards
-- `/about` — family-owned story, values, credentials
-- `/contact` — appointment form + NAP + hours + Google map embed
-- `/api/appointment` — form handler
+- `/car-care-tips` + `/car-care-tips/[slug]` — Car Care Tips blog (5 real articles migrated from the old tips pages) w/ Article schema. Old `/blog` was empty (zero posts); this is the content hub, ready for new posts.
+- `/about` — family-owned story + **About-the-Owner (real Conley Newby bio)** + "we service all makes" list + values + credentials
+- `/careers` — hiring page + online application form (real owner copy)
+- `/contact` — in-depth appointment form + NAP + hours + Google map embed
+- `/api/appointment` — handles both appointment requests and careers applications (`type: employment`)
+
+Also: "We service all makes & models" brand list (Acura…Volvo) on Services + About; social links (Facebook/Google/Yelp/SureCritic) in header + footer.
 
 ## SEO / AI-SEO (fixes every gap from the baseline audit)
 - Single H1 per page (old site had multiple)
