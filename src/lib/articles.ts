@@ -207,7 +207,7 @@ export const articles: Article[] = [
       },
       {
         "type": "p",
-        "text": "If your vehicle is showing signs of air conditioning issues or is due for service, the experienced team at {{ Location Name }} is ready to assist drivers in Henderson with professional air conditioning inspections and maintenance. Visit {{ Location Website }} to schedule your service and keep your vehicle cool and comfortable."
+        "text": "If your vehicle is showing signs of air conditioning issues or is due for service, the experienced team at Newby’s Automotive Center is ready to assist drivers in Henderson with professional air conditioning inspections and maintenance. Visit Newby’s Automotive Center online to schedule your service and keep your vehicle cool and comfortable."
       }
     ]
   },
@@ -1358,7 +1358,7 @@ export const articles: Article[] = [
       },
       {
         "type": "p",
-        "text": "Your water pump may not be the most visible component under the hood, but it’s one of the most critical for long-term engine health. If you’ve noticed signs of wear or it’s time for a routine replacement at {{Location Name}. Our technicians use high-quality OEM or equivalent water pumps and inspect your entire cooling system to ensure your vehicle runs safely and efficiently."
+        "text": "Your water pump may not be the most visible component under the hood, but it’s one of the most critical for long-term engine health. If you’ve noticed signs of wear or it’s time for a routine replacement, the technicians at Newby’s Automotive Center can help. Our technicians use high-quality OEM or equivalent water pumps and inspect your entire cooling system to ensure your vehicle runs safely and efficiently."
       },
       {
         "type": "p",
