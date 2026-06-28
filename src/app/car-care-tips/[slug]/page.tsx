@@ -32,7 +32,12 @@ export async function generateMetadata({
 }
 
 function formatDate(iso: string) {
-  return new Date(iso).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+  const [year, month, day] = iso.split("-").map(Number);
+  return new Date(year, month - 1, day).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 }
 
 export default async function ArticlePage({
@@ -52,7 +57,7 @@ export default async function ArticlePage({
       <JsonLd
         data={breadcrumbSchema([
           { name: "Home", path: "/" },
-          { name: "Car Care Tips", path: "/car-care-tips" },
+          { name: "Blog", path: "/car-care-tips" },
           { name: a.title, path: `/car-care-tips/${a.slug}` },
         ])}
       />
@@ -64,7 +69,7 @@ export default async function ArticlePage({
             <nav className="mb-4 text-sm text-white/60" aria-label="Breadcrumb">
               <Link href="/" className="hover:text-white">Home</Link>
               <span className="px-2">/</span>
-              <Link href="/car-care-tips" className="hover:text-white">Car Care Tips</Link>
+              <Link href="/car-care-tips" className="hover:text-white">Blog</Link>
             </nav>
             <p className="text-sm font-semibold text-white/70">
               {formatDate(a.date)} · {a.readMins} min read

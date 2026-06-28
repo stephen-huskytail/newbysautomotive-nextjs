@@ -9,14 +9,15 @@ import { ArrowIcon } from "@/components/icons";
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: "Car Care Tips & Auto Advice — Henderson, NV",
+  title: "Auto Repair Blog & Car Care Tips — Henderson, NV",
   description:
-    "Practical car care tips from Newby's Automotive in Henderson, NV: summer & winter driving, oil changes, battery and cooling-system care, warranty facts and more.",
+    "Read Newby's Automotive blog posts and car care tips for Henderson drivers: oil changes, diagnostics, A/C service, batteries, brakes, tires, fluids and more.",
   alternates: { canonical: "/car-care-tips" },
 };
 
 function formatDate(iso: string) {
-  return new Date(iso).toLocaleDateString("en-US", {
+  const [year, month, day] = iso.split("-").map(Number);
+  return new Date(year, month - 1, day).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -29,12 +30,12 @@ export default function CarCareTipsPage() {
   return (
     <>
       <PageHeader
-        eyebrow="Car Care Tips"
-        title="Advice to keep your vehicle running strong"
-        intro="Straight-talk car care tips from the team at Newby's — written for real Henderson drivers and our desert climate. No jargon, no upsells."
+        eyebrow="Newby's Automotive Blog"
+        title="Auto repair advice to keep your vehicle running strong"
+        intro="The full Newby's Automotive blog archive — preserved from the old site with local images so these posts stay online after the legacy platform goes away."
         crumbs={[
           { name: "Home", href: "/" },
-          { name: "Car Care Tips", href: "/car-care-tips" },
+          { name: "Blog", href: "/car-care-tips" },
         ]}
       />
 

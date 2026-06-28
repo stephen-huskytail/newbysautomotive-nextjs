@@ -311,7 +311,7 @@ export const nav = [
   { label: "Services", href: "/services" },
   { label: "Reviews", href: "/reviews" },
   { label: "Specials", href: "/specials" },
-  { label: "Car Care Tips", href: "/car-care-tips" },
+  { label: "Blog", href: "/car-care-tips" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ] as const;
