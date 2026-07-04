@@ -6,7 +6,9 @@ import { articles, getArticle } from "@/lib/articles";
 import { articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/JsonLd";
 import { CTASection } from "@/components/CTASection";
+import { Stars } from "@/components/Stars";
 import { ArrowIcon } from "@/components/icons";
+import { site } from "@/lib/site";
 
 export const revalidate = 86400;
 export const dynamicParams = false;
@@ -84,6 +86,27 @@ export default async function ArticlePage({
             <Image src={a.photo} alt={a.photoAlt} fill priority sizes="(max-width: 1024px) 100vw, 60vw" className="object-cover" />
           </div>
         </div>
+
+        <aside className="mx-auto mt-6 max-w-4xl px-6">
+          <a
+            href={site.reviews.sureCriticUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col gap-3 rounded-2xl border border-line bg-white p-5 shadow-[var(--shadow-card)] transition hover:border-brand-red sm:flex-row sm:items-center sm:justify-between"
+          >
+            <span>
+              <span className="block text-sm font-bold uppercase tracking-widest text-brand-red">
+                Verified local reputation
+              </span>
+              <span className="mt-1 block text-base font-extrabold text-ink">
+                {site.reviews.count.toLocaleString()} verified reviews from Henderson drivers
+              </span>
+            </span>
+            <span className="inline-flex items-center gap-2 text-sm font-bold text-ink">
+              <Stars rating={site.reviews.rating} size={17} /> {site.reviews.rating} out of 5
+            </span>
+          </a>
+        </aside>
 
         {/* Body */}
         <div className="mx-auto max-w-3xl px-6 py-12">

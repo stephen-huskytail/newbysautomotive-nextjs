@@ -307,7 +307,7 @@ export function getService(slug: string) {
 
 // Primary navigation
 export const nav = [
-  { label: "Home", href: "/" },
+  { label: "Home", href: "/#top" },
   { label: "Services", href: "/services" },
   { label: "Reviews", href: "/reviews" },
   { label: "Specials", href: "/specials" },

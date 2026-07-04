@@ -6923,7 +6923,7 @@ export const articles: Article[] = [
     "excerpt": "If you have been driving your car for a while, you know what to expect when you press down on the gas pedal. You should gain ample speed depending on how...",
     "date": "2023-03-01",
     "readMins": 2,
-    "photo": "/photos/blog/poor-acceleration-auto-repair-reasons.png",
+    "photo": "/photos/blog/why-your-vehicle-may-jerk-while-accelerating.jpg",
     "photoAlt": "Poor Acceleration Auto Repair Reasons",
     "body": [
       {
@@ -7044,7 +7044,7 @@ export const articles: Article[] = [
     "excerpt": "At a certain point in life, every car owner experiences a flat tire. This scenario is even more stressing when you experience it during inclement weather or...",
     "date": "2023-02-15",
     "readMins": 2,
-    "photo": "/photos/blog/what-causes-flat-tires-and-how-to-avoid-them.png",
+    "photo": "/photos/blog/what-causes-tire-repair-damage.jpg",
     "photoAlt": "What Causes Flat Tires and How to avoid them",
     "body": [
       {
@@ -7177,7 +7177,7 @@ export const articles: Article[] = [
     "excerpt": "Unusual and unwanted car noises can be concerning, the thought of having to take your car in for an auto repair service can seem financially daunting...",
     "date": "2023-02-01",
     "readMins": 2,
-    "photo": "/photos/blog/auto-repair-warnings-indicated-by-unusual-sounds.png",
+    "photo": "/photos/blog/decoding-vehicle-noises-your-cars-sos-signals.jpg",
     "photoAlt": "Auto Repair Warnings Indicated by Unusual Sounds",
     "body": [
       {
@@ -7213,7 +7213,7 @@ export const articles: Article[] = [
     "excerpt": "When the check engine light comes on, it is not the end of the world but it is a sign that there is an immediate problem with vehicle and it cannot be...",
     "date": "2023-01-15",
     "readMins": 3,
-    "photo": "/photos/blog/top-7-check-engine-light-reasons.png",
+    "photo": "/photos/blog/check-engine-light-causes-and-fixes-every-driver-should-know.jpg",
     "photoAlt": "Top 7 Check Engine Light Reasons",
     "body": [
       {
@@ -7294,7 +7294,7 @@ export const articles: Article[] = [
     "excerpt": "Our auto repair shop specializes in preventative maintenance and full service repairs. Our technicians are skilled in the inspection and diagnostics of all...",
     "date": "2023-01-01",
     "readMins": 2,
-    "photo": "/photos/blog/suspension-system-specialization.png",
+    "photo": "/photos/blog/suspension-repair-specialists.jpg",
     "photoAlt": "Suspension System Specialization",
     "body": [
       {
@@ -7436,7 +7436,7 @@ export const articles: Article[] = [
     "excerpt": "Safely steering your vehicle is one of the most essential parts in ensuring the safety of you, your passengers, and the drivers around you. To ensure that...",
     "date": "2022-12-15",
     "readMins": 5,
-    "photo": "/photos/blog/quick-guide-to-replacing-your-power-steering-pump-to-control-your-vehicle.png",
+    "photo": "/photos/blog/why-steering-maintenance-is-important-for-your-vehicle.jpg",
     "photoAlt": "Quick Guide to Replacing Your Power Steering Pump to Control Your Vehicle",
     "body": [
       {
@@ -7605,7 +7605,7 @@ export const articles: Article[] = [
     "excerpt": "Car accidents are a huge problem for people regardless of their ages. They are a particularly big concern for senior citizens, though. That is because people...",
     "date": "2022-12-01",
     "readMins": 2,
-    "photo": "/photos/blog/senior-citizens-on-the-road-car-safety-options.png",
+    "photo": "/photos/blog/5-tips-to-ensure-a-smooth-drive.jpg",
     "photoAlt": "Senior Citizens on the Road: Car Safety Options",
     "body": [
       {
@@ -7678,7 +7678,7 @@ export const articles: Article[] = [
     "excerpt": "Your car is an important part of daily life. It’s your workhorse and should be maintained properly to stay that way. Besides gasoline, there are several...",
     "date": "2022-11-15",
     "readMins": 2,
-    "photo": "/photos/blog/the-fluids-that-keep-your-car-running.png",
+    "photo": "/photos/blog/fluid-maintenance-the-lifeline-of-your-vehicle.jpg",
     "photoAlt": "The Fluids that Keep Your Car Running",
     "body": [
       {
@@ -7796,7 +7796,7 @@ export const articles: Article[] = [
     "excerpt": "We spend so much time in our vehicles, it is no wonder they can harbor germs and that we must be vigilant in cleaning high touch points. While vehicle...",
     "date": "2022-11-01",
     "readMins": 2,
-    "photo": "/photos/blog/vehicle-sanitization-is-essential.png",
+    "photo": "/photos/blog/5-preventative-maintenance-tips-for-summer.jpg",
     "photoAlt": "Vehicle Sanitization is Essential",
     "body": [
       {
@@ -7888,7 +7888,7 @@ export const articles: Article[] = [
     "excerpt": "People have long associated the arrival of spring as the sign to tidy up. While we sort through and scrub our homes, it is easy to forget to direct that same...",
     "date": "2022-10-15",
     "readMins": 2,
-    "photo": "/photos/blog/why-spring-is-a-great-time-for-air-filter-replacement.png",
+    "photo": "/photos/blog/air-filter-replacement-why-it-matters-more-than-you-think.jpg",
     "photoAlt": "Why Spring is a Great Time for Air Filter Replacement",
     "body": [
       {
@@ -7965,7 +7965,7 @@ export const articles: Article[] = [
     "excerpt": "There are many accessories that can make owning a car just a bit nicer. One of the most essential is a windshield cover. While windshields are durable, they...",
     "date": "2022-10-01",
     "readMins": 2,
-    "photo": "/photos/blog/advantages-of-using-a-windshield-cover.png",
+    "photo": "/photos/blog/seeing-clearly-windshield-wiper-and-fluid-maintenance.jpg",
     "photoAlt": "Advantages of Using a Windshield Cover",
     "body": [
       {
@@ -8054,7 +8054,7 @@ export const articles: Article[] = [
     "excerpt": "If you want to keep your car safe and functional, you need to have the car battery inspected regularly. A car battery inspection ensures that your battery...",
     "date": "2022-09-15",
     "readMins": 2,
-    "photo": "/photos/blog/car-battery-inspection.png",
+    "photo": "/photos/blog/battery-basics-from-jump-starts-to-replacements-demystified.jpg",
     "photoAlt": "Car Battery Inspection",
     "body": [
       {
@@ -8121,7 +8121,7 @@ export const articles: Article[] = [
     "excerpt": "One of the most common problems to occur in the vacuum system is a leak. A vacuum leak refers to any leak that occurs between the engine and the mass airflow...",
     "date": "2022-09-01",
     "readMins": 2,
-    "photo": "/photos/blog/vacuum-leak-and-engine-danger.png",
+    "photo": "/photos/blog/understanding-engine-misfiring-causes-symptoms-solutions.jpg",
     "photoAlt": "Vacuum Leak and Engine Danger",
     "body": [
       {
@@ -8177,7 +8177,7 @@ export const articles: Article[] = [
     "excerpt": "Maintenance and repair to your emergency and parking brake is necessary for your safety and vehicle health. Each system within a vehicle is important but the...",
     "date": "2022-08-15",
     "readMins": 2,
-    "photo": "/photos/blog/brake-repair-know-how-parking-brake-vs-emergency-brake.png",
+    "photo": "/photos/blog/exploring-advanced-techniques-in-brake-system-repairs.jpg",
     "photoAlt": "Brake Repair Know-How: Parking Brake vs Emergency Brake",
     "body": [
       {
@@ -8218,7 +8218,7 @@ export const articles: Article[] = [
     "excerpt": "Car safety begins and ends with you. You can't control any of the other drivers on the road with you. However, you can control how you react to them. Whether...",
     "date": "2022-08-01",
     "readMins": 2,
-    "photo": "/photos/blog/why-defensive-driving-matters.png",
+    "photo": "/photos/blog/test-driving-tips-what-to-look-for.jpg",
     "photoAlt": "Why Defensive Driving Matters",
     "body": [
       {
@@ -8297,7 +8297,7 @@ export const articles: Article[] = [
     "excerpt": "Drive axles are axles on engine powered vehicles that transfer energy from the engine and torque from the transmission on to the front, rear or all the...",
     "date": "2022-07-15",
     "readMins": 6,
-    "photo": "/photos/blog/drive-axle-repair-reasons-for-need-and-what-is-it-comprised-of.png",
+    "photo": "/photos/blog/how-four-wheel-drive-service-helps-prevent-major-repairs.jpg",
     "photoAlt": "Drive Axle Repair: Reasons for Need and What is it Comprised Of",
     "body": [
       {
@@ -8498,7 +8498,7 @@ export const articles: Article[] = [
     "excerpt": "If you’ve been driving for any length of time, you know how important your steering system is. Without this component, you wouldn’t be able to stay in...",
     "date": "2022-07-01",
     "readMins": 5,
-    "photo": "/photos/blog/reasons-why-it-may-be-difficult-to-steer-your-vehicle.png",
+    "photo": "/photos/blog/signs-of-a-failing-steering-system-helpful-tips.jpg",
     "photoAlt": "Reasons Why It May be Difficult to Steer Your Vehicle",
     "body": [
       {
@@ -8619,7 +8619,7 @@ export const articles: Article[] = [
     "excerpt": "In order to register and legally and safely drive an automobile, it must be able to pass an annual state-mandated emissions test. This helps ensure your...",
     "date": "2022-06-15",
     "readMins": 6,
-    "photo": "/photos/blog/emission-system-repairs.png",
+    "photo": "/photos/blog/exhaust-system-maintenance-tips-every-driver-should-use.jpg",
     "photoAlt": "Emission System Repairs",
     "body": [
       {
@@ -8772,7 +8772,7 @@ export const articles: Article[] = [
     "excerpt": "A car transfer case is the place where power in a four-wheel-drive car is transferred to the back wheels. The majority of cars have front-wheel drive, but a...",
     "date": "2022-06-01",
     "readMins": 6,
-    "photo": "/photos/blog/what-is-the-transfer-case-in-your-car.png",
+    "photo": "/photos/blog/how-four-wheel-drive-service-helps-prevent-major-repairs.jpg",
     "photoAlt": "What Is The Transfer Case In Your Car?",
     "body": [
       {
@@ -8909,7 +8909,7 @@ export const articles: Article[] = [
     "excerpt": "Automobiles are pretty complex things. They consist of all sorts of essential parts and features. If you want your car to run in a dependable and effective...",
     "date": "2022-05-15",
     "readMins": 4,
-    "photo": "/photos/blog/all-about-alternators-for-vehicles.png",
+    "photo": "/photos/blog/alternator-empowerment-unveil-its-crucial-role.jpg",
     "photoAlt": "All About Alternators for Vehicles",
     "body": [
       {
@@ -8978,7 +8978,7 @@ export const articles: Article[] = [
     "excerpt": "Modern automobiles are more dependent on their electrical systems than ever before. That means the car electrical repair shop you choose is vitally...",
     "date": "2022-05-01",
     "readMins": 6,
-    "photo": "/photos/blog/car-electrical-repair.png",
+    "photo": "/photos/blog/auto-electrical-diagnostics-and-repair.jpg",
     "photoAlt": "Car Electrical Repair",
     "body": [
       {
@@ -9104,7 +9104,7 @@ export const articles: Article[] = [
     "excerpt": "The standard time frame to get an oil change is between 3,000 – 5,000 miles. We all know that oil changes are a necessity, but the average automobile owner...",
     "date": "2022-04-15",
     "readMins": 2,
-    "photo": "/photos/blog/dont-neglect-your-routine-oil-change.png",
+    "photo": "/photos/blog/how-routine-oil-changes-help-prevent-engine-wear.jpg",
     "photoAlt": "Don’t Neglect Your Routine Oil Change",
     "body": [
       {
@@ -9145,7 +9145,7 @@ export const articles: Article[] = [
     "excerpt": "A catalytic converter is a key component in minimizing pollution and vehicle emissions. The catalytic converter works to convert harmful emissions into...",
     "date": "2022-04-01",
     "readMins": 2,
-    "photo": "/photos/blog/compromised-catalytic-converter-breeds-engine-damage.png",
+    "photo": "/photos/blog/the-most-common-exhaust-system-problems.jpg",
     "photoAlt": "Compromised Catalytic Converter Breeds Engine Damage",
     "body": [
       {
@@ -9204,7 +9204,7 @@ export const articles: Article[] = [
     "excerpt": "The transmission is the part of a car the takes the energy produced from the engine and gives it to what is driver controlled like drive shaft and wheels. An...",
     "date": "2022-03-15",
     "readMins": 2,
-    "photo": "/photos/blog/transmission-repair-costs-and-best-ways-to-save.png",
+    "photo": "/photos/blog/top-signs-of-transmission-failure-and-how-to-prevent-it.jpg",
     "photoAlt": "Transmission Repair Costs and Best Ways to Save",
     "body": [
       {
@@ -9258,7 +9258,7 @@ export const articles: Article[] = [
     "excerpt": "A clutch is found in all cars with a manual transmission. When a car is on and moving, he clutch is being used. The clutch pedal is the pedal located to the...",
     "date": "2022-03-01",
     "readMins": 2,
-    "photo": "/photos/blog/timely-clutch-repair-is-key.png",
+    "photo": "/photos/blog/protecting-the-transmission-and-clutch-key-tips-and-methods.jpg",
     "photoAlt": "Timely Clutch Repair Is Key",
     "body": [
       {
@@ -9320,7 +9320,7 @@ export const articles: Article[] = [
     "excerpt": "Everyone that’s owned a car knows the woeful feeling of looking at your dashboard and seeing your check engine light turn on. It’s likely that the...",
     "date": "2022-02-15",
     "readMins": 2,
-    "photo": "/photos/blog/dont-ignore-your-check-engine-light.png",
+    "photo": "/photos/blog/unraveling-the-mystery-behind-your-vehicles-check-engine-light.jpg",
     "photoAlt": "Don’t Ignore Your Check Engine Light",
     "body": [
       {
@@ -9405,7 +9405,7 @@ export const articles: Article[] = [
     "excerpt": "Engines take on a huge workload. Understandably, this causes your engine to get extremely hot. The radiator works to regulate the engine’s temperature to...",
     "date": "2022-02-01",
     "readMins": 2,
-    "photo": "/photos/blog/why-checking-your-coolant-is-important.png",
+    "photo": "/photos/blog/warning-signs-that-your-vehicle-is-overheating.jpg",
     "photoAlt": "Why Checking Your Coolant Is Important",
     "body": [
       {
@@ -9466,7 +9466,7 @@ export const articles: Article[] = [
     "excerpt": "Your car battery is an essential part of your vehicle that allows it to perform many of the necessities we use in our every day lives. Car batteries produce...",
     "date": "2022-01-15",
     "readMins": 2,
-    "photo": "/photos/blog/proper-maintenance-for-your-car-battery.png",
+    "photo": "/photos/blog/how-to-preserve-my-vehicles-battery.jpg",
     "photoAlt": "Proper Maintenance For Your Car Battery",
     "body": [
       {
@@ -9542,7 +9542,7 @@ export const articles: Article[] = [
     "excerpt": "Fuel Efficiency refers to the amount of time and distance a vehicle can travel without the need to refuel. This idea is also referred to as miles per gallon...",
     "date": "2021-12-15",
     "readMins": 2,
-    "photo": "/photos/blog/fuel-efficiency-how-to-save-time-and-money-at-the-pump.png",
+    "photo": "/photos/blog/fuel-system-repair-keeping-your-vehicle-at-peak-performance.jpg",
     "photoAlt": "Fuel Efficiency: How to Save time and Money at the Pump",
     "body": [
       {
@@ -9594,7 +9594,7 @@ export const articles: Article[] = [
     "excerpt": "Spark plugs play an instrumental part in powering up your vehicle. It is essential for the safety of the driver as well as the life of your vehicle that they...",
     "date": "2021-12-01",
     "readMins": 2,
-    "photo": "/photos/blog/why-and-when-your-spark-plugs-should-be-repaired-or-replaced.png",
+    "photo": "/photos/blog/parts-of-spark-plug-broken-down.jpg",
     "photoAlt": "Why and when your spark plugs should be repaired or replaced",
     "body": [
       {
@@ -9647,7 +9647,7 @@ export const articles: Article[] = [
     "excerpt": "A car cannot safely operate without a water pump. A water pump maintains the necessary car temperature for a car to be functionable through a series of...",
     "date": "2021-11-15",
     "readMins": 2,
-    "photo": "/photos/blog/an-operative-water-pump-maintains-your-engine-temperature.png",
+    "photo": "/photos/blog/water-pump-replacements-signs-function-and-performance-risk.jpg",
     "photoAlt": "An Operative Water Pump Maintains your Engine Temperature",
     "body": [
       {

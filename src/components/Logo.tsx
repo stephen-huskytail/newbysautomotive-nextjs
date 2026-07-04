@@ -11,7 +11,7 @@ export function Logo({
   const sub = variant === "light" ? "text-white/80" : "text-ink/70";
   return (
     <Link
-      href="/"
+      href="/#top"
       aria-label="Newby's Automotive Center — home"
       className={`group inline-flex flex-col leading-none ${className}`}
     >

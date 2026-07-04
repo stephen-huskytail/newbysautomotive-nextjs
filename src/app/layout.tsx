@@ -7,6 +7,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { StickyCallBar } from "@/components/StickyCallBar";
 import { JsonLd } from "@/components/JsonLd";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -54,12 +55,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${montserrat.variable} h-full`}>
-      <body className="flex min-h-full flex-col pb-16 lg:pb-0">
+      <body id="top" className="flex min-h-full flex-col pb-16 lg:pb-0">
         <JsonLd data={localBusinessSchema()} />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
         <StickyCallBar />
+        <Analytics />
       </body>
     </html>
   );

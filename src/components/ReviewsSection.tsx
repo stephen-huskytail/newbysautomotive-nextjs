@@ -20,6 +20,9 @@ export function ReviewsSection({
           </h2>
           <div className="mt-5 inline-flex flex-col items-center gap-2 rounded-2xl bg-white px-7 py-4 shadow-[var(--shadow-card)]">
             <Stars rating={site.reviews.rating} size={24} />
+            <p className="rounded-full bg-brand-navy px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
+              SureCritic verified customer reviews
+            </p>
             <p className="text-lg font-bold text-ink">
               {site.reviews.rating} out of 5 ·{" "}
               <span className="text-brand-red">{site.reviews.count.toLocaleString()}</span> verified

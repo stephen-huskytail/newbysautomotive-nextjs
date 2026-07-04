@@ -5,6 +5,8 @@ import { articles } from "@/lib/articles";
 import { PageHeader } from "@/components/PageHeader";
 import { CTASection } from "@/components/CTASection";
 import { ArrowIcon } from "@/components/icons";
+import { Stars } from "@/components/Stars";
+import { site } from "@/lib/site";
 
 export const revalidate = 86400;
 
@@ -38,6 +40,25 @@ export default function CarCareTipsPage() {
           { name: "Blog", href: "/car-care-tips" },
         ]}
       />
+
+      <section className="border-b border-line bg-white py-6">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-widest text-brand-red">Verified reviews</p>
+            <p className="mt-1 text-lg font-extrabold text-ink">
+              {site.reviews.rating} out of 5 from {site.reviews.count.toLocaleString()} Henderson drivers
+            </p>
+          </div>
+          <a
+            href={site.reviews.sureCriticUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 font-bold text-brand-navy hover:text-brand-red"
+          >
+            <Stars rating={site.reviews.rating} size={17} /> Read verified reviews
+          </a>
+        </div>
+      </section>
 
       {/* Featured */}
       <section className="py-14">
