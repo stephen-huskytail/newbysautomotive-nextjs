@@ -1,4 +1,5 @@
-import { makes } from "@/lib/site";
+import Link from "next/link";
+import { vehicles } from "@/lib/vehicles";
 
 export function MakesSection({ dark = false }: { dark?: boolean }) {
   return (
@@ -11,20 +12,24 @@ export function MakesSection({ dark = false }: { dark?: boolean }) {
           Vehicles we service &amp; repair
         </h2>
         <p className={`mx-auto mt-4 max-w-2xl ${dark ? "text-white/70" : "text-steel"}`}>
-          Domestic and import, cars and trucks — if you drive it, we can fix it. A few of the makes
-          our Henderson techs work on every day:
+          Domestic and import, cars and trucks — if you drive it, we can fix it. Select your make
+          for details on our Henderson repair and maintenance services:
         </p>
         <ul className="mt-8 flex flex-wrap justify-center gap-2.5">
-          {makes.map((m) => (
+          {vehicles.map((vehicle) => (
             <li
-              key={m}
-              className={`rounded-full px-4 py-1.5 text-sm font-semibold ${
-                dark
-                  ? "bg-white/10 text-white ring-1 ring-white/15"
-                  : "bg-mist text-ink ring-1 ring-line"
-              }`}
+              key={vehicle.slug}
             >
-              {m}
+              <Link
+                href={`/vehicles/${vehicle.slug}`}
+                className={`inline-flex rounded-full px-4 py-1.5 text-sm font-semibold transition ${
+                  dark
+                    ? "bg-white/10 text-white ring-1 ring-white/15 hover:bg-brand-red"
+                    : "bg-mist text-ink ring-1 ring-line hover:bg-brand-red hover:text-white"
+                }`}
+              >
+                {vehicle.name}
+              </Link>
             </li>
           ))}
         </ul>

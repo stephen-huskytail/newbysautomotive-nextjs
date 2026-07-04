@@ -9,6 +9,7 @@ import { FaqSection } from "@/components/FaqSection";
 import { CTASection } from "@/components/CTASection";
 import { JsonLd } from "@/components/JsonLd";
 import { faqSchema } from "@/lib/schema";
+import { MakesSection } from "@/components/MakesSection";
 import { PhoneIcon, ArrowIcon, CheckIcon } from "@/components/icons";
 
 export const revalidate = 86400; // ISR — regenerate at most once a day
@@ -140,6 +141,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <MakesSection />
 
       {/* ── How it works ─────────────────────────────────────── */}
       <section className="py-16 sm:py-20">
