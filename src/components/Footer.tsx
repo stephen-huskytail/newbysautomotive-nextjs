@@ -26,7 +26,7 @@ export function Footer() {
         <div>
           <h3 className="text-sm font-bold uppercase tracking-wider text-white">Services</h3>
           <ul className="mt-4 space-y-2 text-sm">
-            {services.slice(0, 6).map((s) => (
+            {services.map((s) => (
               <li key={s.slug}>
                 <Link href={`/services/${s.slug}`} className="hover:text-white">
                   {s.name}
@@ -90,6 +90,13 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-6 py-5 text-xs text-white/55 sm:flex-row">
           <p>© {site.foundedYear}–present {site.name}. All rights reserved.</p>
+          <p className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+            <Link href="/privacy-policy" className="hover:text-white">Privacy Policy</Link>
+            <span aria-hidden>·</span>
+            <Link href="/terms" className="hover:text-white">Terms of Use</Link>
+            <span aria-hidden>·</span>
+            <Link href="/sitemap" className="hover:text-white">Sitemap</Link>
+          </p>
           <p>Family-owned in Henderson, NV · ASE Certified · NAPA · AAA · BBB</p>
         </div>
       </div>

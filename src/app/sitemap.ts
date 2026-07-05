@@ -4,7 +4,14 @@ import { articles } from "@/lib/articles";
 import { vehicles } from "@/lib/vehicles";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = [...nav, { label: "Careers", href: "/careers" }].map((n) => ({
+  const staticRoutes = [
+    ...nav.map((n) => ({ ...n, href: n.href === "/#top" ? "/" : n.href })),
+    { label: "Careers", href: "/careers" },
+    { label: "Vehicles", href: "/vehicles" },
+    { label: "Sitemap", href: "/sitemap" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms of Use", href: "/terms" },
+  ].map((n) => ({
     url: `${site.url}${n.href}`,
     changeFrequency: "monthly" as const,
     priority: n.href === "/" ? 1 : 0.8,

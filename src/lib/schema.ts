@@ -95,6 +95,7 @@ export function articleSchema(a: {
     headline: a.title,
     description: a.excerpt,
     datePublished: a.date,
+    dateModified: a.date,
     image: `${site.url}${a.photo}`,
     url: `${site.url}/car-care-tips/${a.slug}`,
     author: { "@type": "Organization", name: site.name },
