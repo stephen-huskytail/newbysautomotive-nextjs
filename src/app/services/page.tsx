@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { services, site } from "@/lib/site";
 import { ServiceCard } from "@/components/ServiceCard";
+import { ServiceCTACard } from "@/components/ServiceCTACard";
 import { PageHeader } from "@/components/PageHeader";
 import { CTASection } from "@/components/CTASection";
 import { TrustBar } from "@/components/TrustBar";
@@ -35,6 +36,7 @@ export default function ServicesPage() {
             {services.map((s) => (
               <ServiceCard key={s.slug} service={s} />
             ))}
+            <ServiceCTACard />
           </div>
           <p className="mx-auto mt-10 max-w-2xl text-center text-steel">
             Need something not listed here? From exhaust and cooling systems to fleet service and

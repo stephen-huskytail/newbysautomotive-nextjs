@@ -4,6 +4,7 @@ import { site, services, process } from "@/lib/site";
 import { Stars } from "@/components/Stars";
 import { TrustBar } from "@/components/TrustBar";
 import { ServiceCard } from "@/components/ServiceCard";
+import { ServiceCTACard } from "@/components/ServiceCTACard";
 import { ReviewsSection } from "@/components/ReviewsSection";
 import { FaqSection } from "@/components/FaqSection";
 import { CTASection } from "@/components/CTASection";
@@ -155,6 +156,7 @@ export default function HomePage() {
             {services.map((s) => (
               <ServiceCard key={s.slug} service={s} />
             ))}
+            <ServiceCTACard />
           </div>
         </div>
       </section>
