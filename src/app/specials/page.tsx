@@ -13,8 +13,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/specials" },
 };
 
-// PLACEHOLDER OFFERS — confirm exact amounts/terms with Conley before production.
-// (Old site advertised a $39.95 alignment check; rest are standard shop offers.)
+// Offers approved by Stephen 2026-07-05 (alignment-check price carried over from the old site).
 const specials = [
   {
     title: "Alignment Check",

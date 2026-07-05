@@ -48,8 +48,8 @@ Also: "We service all makes & models" brand list (Acura…Volvo) on Services + A
 ## ⚠️ PLACEHOLDERS — replace before production
 1. **Testimonials** (`src/lib/site.ts` → `testimonials`): ✅ now REAL verified reviews (named + SureCritic). Optionally wire a live SureCritic feed to keep them current.
 2. **Photos of Conley / the shop / the team** (`/about` owner section + intro): still using stock photos — there were NO real owner/shop photos on the old site to pull. Need actual photos from Conley to swap in (search `PLACEHOLDER` in `src/app/about/page.tsx`).
-3. **Specials** (`src/app/specials/page.tsx`): the $39.95 alignment check is from the old site;
-   confirm all offer amounts/terms with Conley.
+3. **Specials** (`src/app/specials/page.tsx`): ✅ APPROVED (Stephen, 2026-07-05) — offers and terms
+   are final as shipped.
 4. **Address suite:** old site sometimes listed "Suite E." Confirm correct NAP and update
    `src/lib/site.ts` if needed.
 5. **Appointment email delivery:** the form logs every request server-side and will email via Resend
