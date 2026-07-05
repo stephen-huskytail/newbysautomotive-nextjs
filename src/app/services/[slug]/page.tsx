@@ -58,6 +58,7 @@ export default async function ServiceDetailPage({
       <PageHeader
         eyebrow={service.category}
         title={`${service.name} in Henderson, NV`}
+        image={service.photo}
         crumbs={[
           { name: "Home", href: "/" },
           { name: "Services", href: "/services" },

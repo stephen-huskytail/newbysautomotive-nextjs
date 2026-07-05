@@ -35,6 +35,7 @@ export default function CarCareTipsPage() {
         eyebrow="Newby's Automotive Blog"
         title="Auto repair advice to keep your vehicle running strong"
         intro="The full Newby's Automotive blog archive — preserved from the old site with local images so these posts stay online after the legacy platform goes away."
+        image="/photos/check-engine-dash.webp"
         crumbs={[
           { name: "Home", href: "/" },
           { name: "Blog", href: "/car-care-tips" },

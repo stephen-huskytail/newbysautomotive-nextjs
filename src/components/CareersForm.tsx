@@ -38,7 +38,7 @@ export function CareersForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-2xl border border-line bg-mist p-8 text-center">
+      <div role="status" className="rounded-2xl border border-line bg-mist p-8 text-center">
         <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-green-100 text-green-700">
           <CheckIcon size={28} />
         </div>
@@ -60,19 +60,19 @@ export function CareersForm() {
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="c-first" className={label}>First Name <span className="text-brand-red">*</span></label>
-          <input id="c-first" name="firstName" required className={field} placeholder="John" />
+          <input id="c-first" name="firstName" required autoComplete="given-name" className={field} placeholder="John" />
         </div>
         <div>
           <label htmlFor="c-last" className={label}>Last Name <span className="text-brand-red">*</span></label>
-          <input id="c-last" name="lastName" required className={field} placeholder="Smith" />
+          <input id="c-last" name="lastName" required autoComplete="family-name" className={field} placeholder="Smith" />
         </div>
         <div>
           <label htmlFor="c-phone" className={label}>Phone <span className="text-brand-red">*</span></label>
-          <input id="c-phone" name="phone" type="tel" required className={field} placeholder="(702) 555-0123" />
+          <input id="c-phone" name="phone" type="tel" required autoComplete="tel" className={field} placeholder="(702) 555-0123" />
         </div>
         <div>
           <label htmlFor="c-email" className={label}>Email <span className="text-brand-red">*</span></label>
-          <input id="c-email" name="email" type="email" required className={field} placeholder="john@email.com" />
+          <input id="c-email" name="email" type="email" required autoComplete="email" className={field} placeholder="john@email.com" />
         </div>
       </div>
       <div>
@@ -92,7 +92,7 @@ export function CareersForm() {
       </div>
 
       {status === "error" && (
-        <p className="rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700">
+        <p role="alert" className="rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700">
           {error} You can also call us at{" "}
           <a href={`tel:${site.phone.tel}`} className="font-bold underline">{site.phone.display}</a>.
         </p>

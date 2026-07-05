@@ -33,6 +33,7 @@ export default async function VehiclesPage({
         eyebrow="Vehicles"
         title="Vehicles we service & repair"
         intro="Domestic and import, cars and trucks — Newby's Automotive Center works on all makes and models at our Henderson, NV shop."
+        image="/photos/towing-flatbed.webp"
         crumbs={[
           { name: "Home", href: "/" },
           { name: "Vehicles", href: "/vehicles" },

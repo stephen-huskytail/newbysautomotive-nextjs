@@ -44,7 +44,7 @@ export default async function VehicleDetailPage({
   const vehicle = getVehicle(slug);
   if (!vehicle) notFound();
 
-  const otherVehicles = vehicles.filter((item) => item.slug !== vehicle.slug).slice(0, 8);
+  const otherVehicles = vehicles.filter((item) => item.slug !== vehicle.slug);
 
   return (
     <>
@@ -72,6 +72,7 @@ export default async function VehicleDetailPage({
         eyebrow={`${vehicle.name} Repair`}
         title={vehicle.title.replace("Newby's Automotive Ctr", "Newby's Automotive Center")}
         intro={`Certified ${vehicle.name} repair and maintenance from Newby's Automotive Center in Henderson, NV.`}
+        image="/photos/towing-flatbed.webp"
         crumbs={[
           { name: "Home", href: "/" },
           { name: "Vehicles", href: "/vehicles" },

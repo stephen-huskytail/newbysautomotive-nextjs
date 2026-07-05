@@ -22,6 +22,7 @@ export default function ServicesPage() {
         eyebrow="Services"
         title="Complete auto repair for every make & model"
         intro="From routine maintenance to major repairs, Newby's is Henderson's one-stop shop. ASE-certified technicians, honest pricing, and nationwide warranty on most work."
+        image="/photos/wheel-alignment.webp"
         crumbs={[
           { name: "Home", href: "/" },
           { name: "Services", href: "/services" },

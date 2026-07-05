@@ -10,6 +10,7 @@ import { CTASection } from "@/components/CTASection";
 import { JsonLd } from "@/components/JsonLd";
 import { faqSchema } from "@/lib/schema";
 import { MakesSection } from "@/components/MakesSection";
+import { HeroAppointmentForm } from "@/components/HeroAppointmentForm";
 import { PhoneIcon, ArrowIcon, CheckIcon } from "@/components/icons";
 
 export const revalidate = 86400; // ISR — regenerate at most once a day
@@ -48,7 +49,8 @@ export default function HomePage() {
           className="object-cover object-center opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-brand-navy/40" />
-        <div className="relative mx-auto max-w-7xl px-6 py-20 sm:py-28">
+        <div className="relative mx-auto max-w-7xl px-6 py-20 sm:py-24">
+          <div className="grid items-center gap-12 lg:grid-cols-[1fr_minmax(0,26rem)] xl:grid-cols-[1fr_minmax(0,28rem)]">
           <div className="max-w-2xl">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-semibold text-white ring-1 ring-white/20">
               <Stars rating={site.reviews.rating} size={15} />
@@ -68,12 +70,12 @@ export default function HomePage() {
               >
                 <PhoneIcon size={20} /> Call {site.phone.display}
               </a>
-              <Link
-                href="/contact"
+              <a
+                href="#appointment"
                 className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/40 px-7 py-4 text-base font-bold text-white transition hover:bg-white/10"
               >
                 Request Appointment <ArrowIcon size={18} />
-              </Link>
+              </a>
             </div>
             <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-white/85">
               {["ASE Certified", "Family-Owned Since 2000", "All Makes & Models", "Nationwide Warranty"].map((t) => (
@@ -82,6 +84,21 @@ export default function HomePage() {
                 </li>
               ))}
             </ul>
+          </div>
+
+          {/* Hero appointment form */}
+          <div
+            id="appointment"
+            className="rounded-2xl bg-white/95 p-6 shadow-2xl ring-1 ring-white/20 backdrop-blur sm:p-7"
+          >
+            <h2 className="text-xl font-extrabold text-ink">Request an Appointment</h2>
+            <p className="mt-1 text-sm text-steel">
+              Send a request and we&rsquo;ll call you back to confirm a time.
+            </p>
+            <div className="mt-4">
+              <HeroAppointmentForm />
+            </div>
+          </div>
           </div>
         </div>
       </section>

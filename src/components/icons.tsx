@@ -36,6 +36,54 @@ export const ArrowIcon = ({ className = "", size = 18 }: P) => (
 
 export const ClockArrow = ArrowIcon;
 
+export const HomeIcon = ({ className = "", size = 18 }: P) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+    <path d="M12 3l9 8h-3v9h-4.5v-6h-3v6H6v-9H3l9-8z" fill="currentColor" />
+  </svg>
+);
+
+export const WrenchIcon = ({ className = "", size = 18 }: P) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+    <path
+      d="M22.61 18.99l-9.08-9.08a6.02 6.02 0 00-1.44-7 6.01 6.01 0 00-7.03-1.48l4.44 4.44-2.63 2.63L2.43 4.06a6.01 6.01 0 001.48 7.02 6.02 6.02 0 007 1.44l9.08 9.08a1 1 0 001.41 0l1.21-1.2a1 1 0 000-1.41z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
+export const TagIcon = ({ className = "", size = 18 }: P) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+    <path
+      d="M21.41 11.58l-9-9A2 2 0 0011 2H4a2 2 0 00-2 2v7c0 .55.22 1.05.59 1.42l9 9a2 2 0 002.82 0l7-7a2 2 0 000-2.84zM5.5 7A1.5 1.5 0 115.5 4a1.5 1.5 0 010 3z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
+export const NewsIcon = ({ className = "", size = 18 }: P) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+    <path
+      d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
+export const UserIcon = ({ className = "", size = 18 }: P) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+    <path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-3.34 0-8 1.67-8 5v2h16v-2c0-3.33-4.66-5-8-5z" fill="currentColor" />
+  </svg>
+);
+
+export const MailIcon = ({ className = "", size = 18 }: P) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+    <path
+      d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+      fill="currentColor"
+    />
+  </svg>
+);
+
 // ── Brand glyphs (single-color, inherit currentColor) ───────────────────────
 export const FacebookIcon = ({ className = "", size = 18 }: P) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">

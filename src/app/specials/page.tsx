@@ -49,6 +49,7 @@ export default function SpecialsPage() {
         eyebrow="Save Money"
         title="Online specials & coupons"
         intro="Quality auto repair doesn't have to break the bank. Mention any of these specials when you call to schedule your appointment."
+        image="/photos/oil-change.webp"
         crumbs={[
           { name: "Home", href: "/" },
           { name: "Specials", href: "/specials" },

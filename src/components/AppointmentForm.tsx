@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { site, services } from "@/lib/site";
+import { setMinToday } from "@/lib/dateInput";
 import { PhoneIcon, CheckIcon } from "./icons";
 
 type Status = "idle" | "submitting" | "success" | "error";
@@ -50,7 +51,7 @@ export function AppointmentForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-2xl border border-line bg-mist p-8 text-center">
+      <div role="status" className="rounded-2xl border border-line bg-mist p-8 text-center">
         <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-green-100 text-green-700">
           <CheckIcon size={28} />
         </div>
@@ -82,19 +83,19 @@ export function AppointmentForm() {
         <div className="grid gap-4 sm:grid-cols-2">
           <div>
             <label htmlFor="firstName" className={label}>First Name {req}</label>
-            <input id="firstName" name="firstName" required className={field} placeholder="John" />
+            <input id="firstName" name="firstName" required autoComplete="given-name" className={field} placeholder="John" />
           </div>
           <div>
             <label htmlFor="lastName" className={label}>Last Name {req}</label>
-            <input id="lastName" name="lastName" required className={field} placeholder="Smith" />
+            <input id="lastName" name="lastName" required autoComplete="family-name" className={field} placeholder="Smith" />
           </div>
           <div>
             <label htmlFor="phone" className={label}>Phone {req}</label>
-            <input id="phone" name="phone" type="tel" required className={field} placeholder="(702) 555-0123" />
+            <input id="phone" name="phone" type="tel" required autoComplete="tel" className={field} placeholder="(702) 555-0123" />
           </div>
           <div>
             <label htmlFor="email" className={label}>Email {req}</label>
-            <input id="email" name="email" type="email" required className={field} placeholder="john@email.com" />
+            <input id="email" name="email" type="email" required autoComplete="email" className={field} placeholder="john@email.com" />
           </div>
         </div>
       </fieldset>
@@ -137,7 +138,7 @@ export function AppointmentForm() {
           </div>
           <div>
             <label htmlFor="firstChoiceDate" className={label}>First Choice Date {req}</label>
-            <input id="firstChoiceDate" name="firstChoiceDate" type="date" required className={field} />
+            <input id="firstChoiceDate" name="firstChoiceDate" type="date" required ref={setMinToday} className={field} />
           </div>
           <div>
             <label htmlFor="firstChoiceTime" className={label}>First Choice Time {req}</label>
@@ -148,7 +149,7 @@ export function AppointmentForm() {
           </div>
           <div>
             <label htmlFor="secondChoiceDate" className={label}>Second Choice Date</label>
-            <input id="secondChoiceDate" name="secondChoiceDate" type="date" className={field} />
+            <input id="secondChoiceDate" name="secondChoiceDate" type="date" ref={setMinToday} className={field} />
           </div>
           <div>
             <label htmlFor="secondChoiceTime" className={label}>Second Choice Time</label>
@@ -180,7 +181,7 @@ export function AppointmentForm() {
       </fieldset>
 
       {status === "error" && (
-        <p className="rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700">
+        <p role="alert" className="rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700">
           {error} You can also reach us directly at{" "}
           <a href={`tel:${site.phone.tel}`} className="font-bold underline">{site.phone.display}</a>.
         </p>

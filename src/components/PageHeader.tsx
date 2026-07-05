@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function PageHeader({
@@ -5,15 +6,27 @@ export function PageHeader({
   title,
   intro,
   crumbs,
+  image = "/photos/mechanic-clipboard.webp",
 }: {
   eyebrow?: string;
   title: string;
   intro?: string;
   crumbs?: { name: string; href: string }[];
+  /** Background photo, faded into the navy gradient. Pass a page-specific photo when one fits. */
+  image?: string;
 }) {
   return (
-    <section className="bg-navy-gradient">
-      <div className="mx-auto max-w-7xl px-6 py-14 sm:py-16">
+    <section className="relative isolate overflow-hidden bg-navy-gradient">
+      <Image
+        src={image}
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center opacity-25"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/80 to-brand-navy/30" />
+      <div className="relative mx-auto max-w-7xl px-6 py-14 sm:py-16">
         {crumbs && (
           <nav className="mb-4 text-sm text-white/60" aria-label="Breadcrumb">
             {crumbs.map((c, i) => (

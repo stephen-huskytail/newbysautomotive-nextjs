@@ -27,6 +27,7 @@ export default function ReviewsPage() {
         eyebrow="Verified Reviews"
         title="The most-reviewed auto shop in Henderson"
         intro="Our reputation is built one honest repair at a time. These numbers come from SureCritic's human-verified review platform — real customers, real visits."
+        image="/photos/customer-keys.webp"
         crumbs={[
           { name: "Home", href: "/" },
           { name: "Reviews", href: "/reviews" },

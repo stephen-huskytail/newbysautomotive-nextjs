@@ -20,6 +20,7 @@ export default function ContactPage() {
         eyebrow="Contact Us"
         title="Schedule your service today"
         intro="The fastest way to get on the schedule is to call us. Prefer online? Send a request below and we'll call you right back."
+        image="/photos/customer-keys.webp"
         crumbs={[
           { name: "Home", href: "/" },
           { name: "Contact", href: "/contact" },

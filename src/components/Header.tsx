@@ -5,7 +5,29 @@ import { useState } from "react";
 import { site, nav } from "@/lib/site";
 import { Logo } from "./Logo";
 import { SocialLinks } from "./SocialLinks";
-import { PhoneIcon, ClockIcon, PinIcon } from "./icons";
+import {
+  PhoneIcon,
+  ClockIcon,
+  PinIcon,
+  HomeIcon,
+  WrenchIcon,
+  StarBadgeIcon,
+  TagIcon,
+  NewsIcon,
+  UserIcon,
+  MailIcon,
+} from "./icons";
+
+// Icon per nav label — keyed by label so lib/site.ts stays icon-free.
+const navIcons: Record<string, (p: { className?: string; size?: number }) => React.ReactNode> = {
+  Home: HomeIcon,
+  Services: WrenchIcon,
+  Reviews: StarBadgeIcon,
+  Specials: TagIcon,
+  Blog: NewsIcon,
+  About: UserIcon,
+  Contact: MailIcon,
+};
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -40,16 +62,20 @@ export function Header() {
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3">
           <Logo />
 
-          <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
-            {nav.map((n) => (
-              <Link
-                key={n.href}
-                href={n.href}
-                className="text-sm font-semibold text-ink/80 transition hover:text-brand-red"
-              >
-                {n.label}
-              </Link>
-            ))}
+          <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary">
+            {nav.map((n) => {
+              const Icon = navIcons[n.label];
+              return (
+                <Link
+                  key={n.href}
+                  href={n.href}
+                  className="group inline-flex items-center gap-1.5 text-sm font-semibold text-ink/80 transition hover:text-brand-red"
+                >
+                  {Icon && <Icon size={15} className="text-brand-red/60 transition group-hover:text-brand-red" />}
+                  {n.label}
+                </Link>
+              );
+            })}
           </nav>
 
           <div className="flex items-center gap-3">
@@ -81,16 +107,20 @@ export function Header() {
         {open && (
           <div className="border-t border-line bg-white lg:hidden">
             <nav className="mx-auto flex max-w-7xl flex-col px-5 py-2" aria-label="Mobile">
-              {nav.map((n) => (
-                <Link
-                  key={n.href}
-                  href={n.href}
-                  onClick={() => setOpen(false)}
-                  className="border-b border-line/70 py-3 text-base font-semibold text-ink/85"
-                >
-                  {n.label}
-                </Link>
-              ))}
+              {nav.map((n) => {
+                const Icon = navIcons[n.label];
+                return (
+                  <Link
+                    key={n.href}
+                    href={n.href}
+                    onClick={() => setOpen(false)}
+                    className="inline-flex items-center gap-3 border-b border-line/70 py-3 text-base font-semibold text-ink/85"
+                  >
+                    {Icon && <Icon size={18} className="text-brand-red/70" />}
+                    {n.label}
+                  </Link>
+                );
+              })}
               <a
                 href={`tel:${site.phone.tel}`}
                 className="mt-3 mb-2 inline-flex items-center justify-center gap-2 rounded-full bg-brand-red px-5 py-3 text-base font-bold text-white"
