@@ -26,9 +26,10 @@ export async function generateMetadata({
   const { slug } = await params;
   const s = getService(slug);
   if (!s) return {};
+  const titleName = s.slug === "oil-change-maintenance" ? "Oil Change Service" : s.name;
   return {
-    title: `${s.name} in Henderson, NV`,
-    description: `${s.short} ASE-certified ${s.name.toLowerCase()} at Newby's Automotive in Henderson, NV. Call ${site.phone.display}.`,
+    title: `${titleName} in Henderson, NV`,
+    description: `${s.name} in Henderson, NV from ASE-certified Newby's Automotive technicians. Honest diagnostics, fair pricing and all-makes service.`,
     alternates: { canonical: `/services/${s.slug}` },
   };
 }

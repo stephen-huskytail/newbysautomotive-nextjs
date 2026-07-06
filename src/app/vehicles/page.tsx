@@ -10,7 +10,7 @@ import { ArrowIcon } from "@/components/icons";
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: "Vehicles We Service in Henderson, NV — All Makes & Models",
+  title: "Vehicles We Service in Henderson, NV",
   description:
     "Newby's Automotive Center services domestic and import vehicles in Henderson, NV, including Acura, Audi, BMW, Chevrolet, Ford, Honda, Toyota, Hyundai and more.",
   alternates: { canonical: "/vehicles" },
@@ -47,7 +47,7 @@ export default async function VehiclesPage({
               Our ASE-certified technicians can work on all makes and models with exceptional expertise. We especially service Chevrolet, Ford, Honda, Chrysler, Toyota, Hyundai and dozens more.
             </p>
             <p className="mt-4 text-steel">
-              Choose your vehicle make below for a dedicated repair and maintenance page copied from the legacy Drive Shops site and rebuilt for the new launch.
+              Choose your vehicle make below for dedicated repair and maintenance information from our Henderson auto shop.
             </p>
           </div>
 

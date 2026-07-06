@@ -26,10 +26,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
     default: "Auto Repair in Henderson, NV | Newby's Automotive Center",
-    template: "%s | Newby's Automotive Center",
+    template: "%s | Newby's Auto",
   },
   description:
-    "Newby's Automotive Center is Henderson's most-reviewed auto repair shop — 4.9★ from 1,400+ verified reviews. ASE-certified, family-owned since 2000. All makes & models. Call (702) 897-9667.",
+    "Henderson auto repair from Newby's Automotive Center: 4.9★ from 1,400+ verified reviews, ASE-certified, family-owned since 2000.",
   keywords: [
     "auto repair Henderson NV",
     "mechanic Henderson 89074",

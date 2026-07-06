@@ -25,11 +25,12 @@ export async function generateMetadata({
   const { slug } = await params;
   const a = getArticle(slug);
   if (!a) return {};
+  const title = a.title.length > 60 ? `${a.title.slice(0, 57).trim()}…` : a.title;
   return {
-    title: a.title,
+    title: { absolute: title },
     description: a.excerpt,
     alternates: { canonical: `/car-care-tips/${a.slug}` },
-    openGraph: { title: a.title, description: a.excerpt, images: [{ url: a.photo }] },
+    openGraph: { title, description: a.excerpt, images: [{ url: a.photo }] },
   };
 }
 

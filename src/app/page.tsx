@@ -188,7 +188,7 @@ export default function HomePage() {
       <section className="bg-brand-navy py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-bold uppercase tracking-widest text-brand-red-light">In The Shop</p>
+            <p className="text-sm font-bold uppercase tracking-widest text-white">In The Shop</p>
             <h2 className="mt-2 text-3xl font-extrabold text-white sm:text-4xl">The work we do every day</h2>
           </div>
           <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">

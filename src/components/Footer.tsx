@@ -34,7 +34,7 @@ export function Footer() {
               </li>
             ))}
             <li>
-              <Link href="/services" className="font-semibold text-brand-red-light hover:text-white">
+              <Link href="/services" className="font-semibold text-white underline-offset-4 hover:underline">
                 View all services →
               </Link>
             </li>

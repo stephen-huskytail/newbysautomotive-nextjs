@@ -7,7 +7,7 @@ import { PhoneIcon } from "@/components/icons";
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: "Online Specials & Coupons — Auto Repair Henderson, NV",
+  title: "Auto Repair Specials in Henderson, NV",
   description:
     "Save on auto repair and maintenance at Newby's Automotive in Henderson, NV. Mention these online specials when you call to schedule.",
   alternates: { canonical: "/specials" },

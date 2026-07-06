@@ -5,7 +5,7 @@ export function MakesSection({ dark = false }: { dark?: boolean }) {
   return (
     <section className={dark ? "bg-brand-navy py-16 sm:py-20" : "bg-white py-16 sm:py-20"}>
       <div className="mx-auto max-w-5xl px-6 text-center">
-        <p className="text-sm font-bold uppercase tracking-widest text-brand-red-light">
+        <p className={`text-sm font-bold uppercase tracking-widest ${dark ? "text-white" : "text-brand-red"}`}>
           We Service All Makes &amp; Models
         </p>
         <h2 className={`mt-2 text-3xl font-extrabold sm:text-4xl ${dark ? "text-white" : "text-ink"}`}>

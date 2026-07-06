@@ -12,7 +12,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = {
   title: "Auto Repair Services in Henderson, NV",
   description:
-    "Complete auto repair in Henderson, NV: brakes, A/C, check engine diagnostics, oil changes, alignment, suspension, engine & transmission, electrical. ASE-certified. All makes & models.",
+    "Complete Henderson auto repair: brakes, A/C, diagnostics, oil changes, alignments, suspension, engine, transmission and electrical service.",
   alternates: { canonical: "/services" },
 };
 

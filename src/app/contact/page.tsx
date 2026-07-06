@@ -7,7 +7,7 @@ import { PhoneIcon, PinIcon, ClockIcon } from "@/components/icons";
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: "Contact & Appointments — Auto Repair in Henderson, NV",
+  title: "Contact Newby's Automotive in Henderson",
   description:
     "Call (702) 897-9667 or request an appointment online at Newby's Automotive, 1201 American Pacific Dr, Henderson, NV 89074. Mon–Fri 8–5.",
   alternates: { canonical: "/contact" },

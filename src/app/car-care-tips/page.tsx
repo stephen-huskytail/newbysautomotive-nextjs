@@ -11,7 +11,7 @@ import { site } from "@/lib/site";
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: "Auto Repair Blog & Car Care Tips — Henderson, NV",
+  title: "Car Care Tips for Henderson Drivers",
   description:
     "Read Newby's Automotive blog posts and car care tips for Henderson drivers: oil changes, diagnostics, A/C service, batteries, brakes, tires, fluids and more.",
   alternates: { canonical: "/car-care-tips" },

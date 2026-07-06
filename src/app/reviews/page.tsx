@@ -7,7 +7,7 @@ import { CTASection } from "@/components/CTASection";
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: "Reviews — 4.9★ from 1,400+ Verified Customers",
+  title: "Reviews — 4.9★ Verified Customers",
   description:
     "See why Newby's Automotive is Henderson's most-reviewed auto repair shop — 4.9 stars from over 1,400 verified reviews, 95% five-star, NPS 96.",
   alternates: { canonical: "/reviews" },

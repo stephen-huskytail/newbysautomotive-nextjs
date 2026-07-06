@@ -7,7 +7,7 @@ import { CheckIcon, PhoneIcon } from "@/components/icons";
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: "Careers — Join Newby's Automotive in Henderson, NV",
+  title: "Careers at Newby's Automotive",
   description:
     "Newby's Automotive Center is hiring in Henderson, NV. Competitive pay, job security, and a supportive, family-run shop culture. Apply online or call (702) 897-9667.",
   alternates: { canonical: "/careers" },

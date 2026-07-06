@@ -10,7 +10,7 @@ import { CheckIcon } from "@/components/icons";
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: "About Newby's Automotive — Family-Owned in Henderson Since 2000",
+  title: "About Newby's Automotive in Henderson",
   description:
     "Newby's Automotive Center is a family-owned, ASE-certified auto repair shop on American Pacific Dr in Henderson, NV. Honest service on all makes and models since 2000.",
   alternates: { canonical: "/about" },

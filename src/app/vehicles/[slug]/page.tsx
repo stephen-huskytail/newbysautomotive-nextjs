@@ -27,9 +27,7 @@ export async function generateMetadata({
   if (!vehicle) return {};
 
   return {
-    title: vehicle.metaTitle
-      .replace(" | Newby's Automotive Ctr", "")
-      .replace(" | Newby's Automotive Center", ""),
+    title: `${vehicle.name} Repair in Henderson, NV`,
     description: vehicle.metaDescription.replace("Newby's Automotive Ctr", "Newby's Automotive Center"),
     alternates: { canonical: `/vehicles/${vehicle.slug}` },
   };
