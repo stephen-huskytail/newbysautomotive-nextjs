@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 export const runtime = "nodejs";
 
 // Where requests are emailed. Set in Vercel env when ready.
-const TO = process.env.APPOINTMENT_TO || "newb@ymail.com";
+const TO = process.env.APPOINTMENT_TO || "cnewb@ymail.com";
 const FROM = process.env.APPOINTMENT_FROM || "appointments@newbysautomotive.com";
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 
