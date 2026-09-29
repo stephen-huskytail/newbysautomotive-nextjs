@@ -1,6 +1,6 @@
 # Newby's Automotive Center — blog publishing authority
 
-Effective 2026-10-01. Myla's instruction: publish one blog on the 1st and 15th of each month, America/Los_Angeles; no client approval before publication. This is production-publishing authority, not a draft-only or approval-package lane. The first due date is 2026-10-01. The exact release time and active publisher controller must be recorded in the live scheduler; a schedule line here alone is not an installed publisher.
+Effective 2026-10-01. Myla's instruction: publish one blog on the 1st and 15th of each month, America/Los_Angeles; no client approval before publication. This is production-publishing authority, not a draft-only or approval-package lane. The first due date is 2026-10-01. Active Hermes controls: read-only preflight `b1c56adfabb7` at 8:30 AM, production publisher `7ad086aeb2c7` at 9:00 AM, and read-only public-proof control `6a53cadf7947` at 10:00 AM Pacific. The first ordinary slot has not yet proven a publication.
 
 ## Master source
 
@@ -14,4 +14,4 @@ Use `docs/blog/Newbys_Automotive_Master_Blog_Prompt_v2.docx` (SHA-256 `8f50d6c1d
 4. Determine the production site's actual source/provider before writing. The repository currently contains `src/lib/articles.ts` and `/car-care-tips` routes; verify the deployed production commit and provider path before choosing a write route. Update the canonical source, build and test, scope-commit and push, bind the resulting production deployment, then verify clean article, archive, raw sitemap, metadata/schema, image URLs, internal links, desktop, and 390px mobile. A source commit or direct URL alone is not a publication receipt.
 5. One due slot yields at most one deduplicated publication. Send the title, canonical URL, and verified publication status to `#hermes-blogs` after proof. On a failed release, report the failed boundary, owner, and observable release condition there; do not claim that missing client approval is a blocker.
 
-The cadence is approved, but this SOP does not itself install a live scheduler or prove the first natural publication.
+The cadence and three controls are configured, but have not yet passed a natural publishing cycle; this SOP does not itself prove the first publication.
