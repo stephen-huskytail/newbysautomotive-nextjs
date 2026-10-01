@@ -88,12 +88,14 @@ export function articleSchema(a: {
   slug: string;
   date: string;
   photo: string;
+  seoDescription?: string;
+  schemaType?: "BlogPosting";
 }) {
   return {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": a.schemaType ?? "Article",
     headline: a.title,
-    description: a.excerpt,
+    description: a.seoDescription ?? a.excerpt,
     datePublished: a.date,
     dateModified: a.date,
     image: `${site.url}${a.photo}`,

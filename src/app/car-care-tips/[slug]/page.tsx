@@ -25,12 +25,13 @@ export async function generateMetadata({
   const { slug } = await params;
   const a = getArticle(slug);
   if (!a) return {};
-  const title = a.title.length > 60 ? `${a.title.slice(0, 57).trim()}…` : a.title;
+  const title = a.seoTitle ?? (a.title.length > 60 ? `${a.title.slice(0, 57).trim()}…` : a.title);
+  const description = a.seoDescription ?? a.excerpt;
   return {
     title: { absolute: title },
-    description: a.excerpt,
+    description,
     alternates: { canonical: `/car-care-tips/${a.slug}` },
-    openGraph: { title, description: a.excerpt, images: [{ url: a.photo }] },
+    openGraph: { title, description, images: [{ url: a.photo }] },
   };
 }
 
@@ -98,6 +99,7 @@ export default async function ArticlePage({
   const { slug } = await params;
   const a = getArticle(slug);
   if (!a) notFound();
+  const postFaqs = a?.faqs;
 
   const headings = a.body
     .filter((b): b is { type: "h"; text: string } => b.type === "h")
@@ -111,6 +113,17 @@ export default async function ArticlePage({
   return (
     <>
       <JsonLd data={articleSchema(a)} />
+      {postFaqs && (
+        <JsonLd data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: postFaqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: { "@type": "Answer", text: faq.answer },
+          })),
+        }} />
+      )}
       <JsonLd
         data={breadcrumbSchema([
           { name: "Home", path: "/" },
@@ -159,7 +172,12 @@ export default async function ArticlePage({
 
             {/* Body */}
             <div className="mt-8 space-y-5 text-lg leading-relaxed text-ink/85">
-              {a.body.map((block, i) => {
+              {a.html ? (
+                <div
+                  className="space-y-5 overflow-x-auto [&_h2]:pt-4 [&_h2]:text-2xl [&_h2]:font-extrabold [&_h3]:text-xl [&_h3]:font-bold [&_p]:my-4 [&_a]:text-brand-red [&_a]:underline [&_ul]:ml-6 [&_ul]:list-disc [&_ul]:space-y-2 [&_aside]:rounded-xl [&_aside]:bg-mist [&_aside]:p-5 [&_table]:block [&_table]:w-full [&_table]:overflow-x-auto [&_table]:text-sm [&_caption]:text-left [&_caption]:font-semibold [&_th]:border [&_th]:p-2 [&_td]:border [&_td]:p-2"
+                  dangerouslySetInnerHTML={{ __html: a.html }}
+                />
+              ) : a.body.map((block, i) => {
                 if (block.type === "h")
                   return (
                     <h2 key={i} id={headingId(block.text)} className="pt-4 text-2xl font-extrabold text-ink">
