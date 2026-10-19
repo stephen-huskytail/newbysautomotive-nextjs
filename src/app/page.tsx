@@ -14,6 +14,8 @@ import { MakesSection } from "@/components/MakesSection";
 import { HeroAppointmentForm } from "@/components/HeroAppointmentForm";
 import { PhoneIcon, ArrowIcon, CheckIcon } from "@/components/icons";
 
+export const metadata = { verification: { google: "V617I2J8SKpczgxR-Aut2XnUeq4H6aV-TsuyXSX4EQI" } };
+
 export const revalidate = 86400; // ISR — regenerate at most once a day
 
 const valueProps = [
