@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { articles, getArticle, type Article } from "@/lib/articles";
+import { articles, getArticle, type Article, type Block } from "@/lib/articles";
 import { articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/JsonLd";
 import { CTASection } from "@/components/CTASection";
@@ -50,6 +50,44 @@ function headingId(text: string) {
     .replace(/[^a-z0-9\s-]/g, "")
     .trim()
     .replace(/\s+/g, "-");
+}
+
+function BodyBlocks({ blocks }: { blocks: Block[] }) {
+  return blocks.map((block, i) => {
+    if (block.type === "h")
+      return (
+        <h2 key={i} id={headingId(block.text)} className="pt-4 text-2xl font-extrabold text-ink">
+          {block.text}
+        </h2>
+      );
+    if (block.type === "ul")
+      return (
+        <ul key={i} className="ml-1 space-y-2">
+          {block.items.map((it, j) => (
+            <li key={j} className="flex items-start gap-2.5">
+              <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-red" />
+              <span>{it}</span>
+            </li>
+          ))}
+        </ul>
+      );
+    if (block.type === "ol")
+      return (
+        <ol key={i} className="ml-6 list-decimal space-y-5 marker:font-bold marker:text-brand-red">
+          {block.items.map((it, j) => (
+            <li key={j} className="pl-1">
+              <p>{it.text}</p>
+              {it.body.length > 0 && (
+                <div className="mt-3 space-y-5">
+                  <BodyBlocks blocks={it.body} />
+                </div>
+              )}
+            </li>
+          ))}
+        </ol>
+      );
+    return <p key={i}>{block.text}</p>;
+  });
 }
 
 const STOPWORDS = new Set([
@@ -177,26 +215,7 @@ export default async function ArticlePage({
                   className="space-y-5 overflow-x-auto [&_h2]:pt-4 [&_h2]:text-2xl [&_h2]:font-extrabold [&_h3]:text-xl [&_h3]:font-bold [&_p]:my-4 [&_a]:text-brand-red [&_a]:underline [&_ul]:ml-6 [&_ul]:list-disc [&_ul]:space-y-2 [&_aside]:rounded-xl [&_aside]:bg-mist [&_aside]:p-5 [&_table]:block [&_table]:w-full [&_table]:overflow-x-auto [&_table]:text-sm [&_caption]:text-left [&_caption]:font-semibold [&_th]:border [&_th]:p-2 [&_td]:border [&_td]:p-2"
                   dangerouslySetInnerHTML={{ __html: a.html }}
                 />
-              ) : a.body.map((block, i) => {
-                if (block.type === "h")
-                  return (
-                    <h2 key={i} id={headingId(block.text)} className="pt-4 text-2xl font-extrabold text-ink">
-                      {block.text}
-                    </h2>
-                  );
-                if (block.type === "ul")
-                  return (
-                    <ul key={i} className="ml-1 space-y-2">
-                      {block.items.map((it, j) => (
-                        <li key={j} className="flex items-start gap-2.5">
-                          <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-red" />
-                          <span>{it}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  );
-                return <p key={i}>{block.text}</p>;
-              })}
+              ) : <BodyBlocks blocks={a.body} />}
             </div>
 
             {/* Author / E-E-A-T box */}
