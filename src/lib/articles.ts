@@ -5,7 +5,8 @@
 export type Block =
   | { type: "p"; text: string }
   | { type: "h"; text: string }
-  | { type: "ul"; items: string[] };
+  | { type: "ul"; items: string[] }
+  | { type: "ol"; items: { text: string; body: Block[] }[] };
 
 export type Article = {
   slug: string;
@@ -860,236 +861,251 @@ export const articles: Article[] = [
         "text": "Thanks to onboard computer diagnostics, these alerts are more accurate than ever. When something goes wrong, your vehicle’s computer system logs a trouble code and illuminates a corresponding warning light on your dashboard. Let’s take a deep dive into the most common warning lights, what they mean, the components they’re related to, and when they require immediate attention."
       },
       {
-        "type": "p",
-        "text": "1. Check Engine Light (Malfunction Indicator Lamp)"
-      },
-      {
-        "type": "p",
-        "text": "What it means: This is one of the most important and well-known warning lights. It typically means your vehicle’s computer diagnostics system has detected a problem in the engine, emissions, or powertrain."
-      },
-      {
-        "type": "p",
-        "text": "Possible causes:"
-      },
-      {
-        "type": "ul",
+        "type": "ol",
         "items": [
-          "A loose gas cap",
-          "A faulty oxygen sensor",
-          "A misfiring engine",
-          "Or a catalytic converter failure"
+          {
+            "text": "Check Engine Light (Malfunction Indicator Lamp)",
+            "body": [
+              {
+                "type": "p",
+                "text": "What it means: This is one of the most important and well-known warning lights. It typically means your vehicle’s computer diagnostics system has detected a problem in the engine, emissions, or powertrain."
+              },
+              {
+                "type": "p",
+                "text": "Possible causes:"
+              },
+              {
+                "type": "ul",
+                "items": [
+                  "A loose gas cap",
+                  "A faulty oxygen sensor",
+                  "A misfiring engine",
+                  "Or a catalytic converter failure"
+                ]
+              },
+              {
+                "type": "p",
+                "text": "Severity: Varies. A flashing light often means a serious issue like a misfire, while a steady light could indicate a minor problem. Either way, it’s best to schedule computer diagnostics with the professionals at Newby's Automotive Ctr to find the exact trouble code."
+              }
+            ]
+          },
+          {
+            "text": "Battery Warning Light",
+            "body": [
+              {
+                "type": "p",
+                "text": "What it means: This light signals an issue with the vehicle’s charging system."
+              },
+              {
+                "type": "p",
+                "text": "Possible causes:"
+              },
+              {
+                "type": "ul",
+                "items": [
+                  "A failing alternator",
+                  "A dead battery",
+                  "Loose or corroded battery terminals",
+                  "A faulty wiring or serpentine belt"
+                ]
+              },
+              {
+                "type": "p",
+                "text": "Severity: Moderate to high. Your vehicle may continue to run briefly but will eventually lose electrical power. Get a battery diagnostic immediately by scheduling an appointment on our website today."
+              }
+            ]
+          },
+          {
+            "text": "Oil Pressure Warning Light",
+            "body": [
+              {
+                "type": "p",
+                "text": "What it means: This light appears when oil pressure drops below the optimal level."
+              },
+              {
+                "type": "p",
+                "text": "Possible causes:"
+              },
+              {
+                "type": "ul",
+                "items": [
+                  "Low oil level",
+                  "Oil pump failure",
+                  "A blocked oil filter",
+                  "Worn engine components"
+                ]
+              },
+              {
+                "type": "p",
+                "text": "Severity: Critical. Stop your vehicle immediately and check the oil. Continuing to drive can cause severe engine damage."
+              }
+            ]
+          },
+          {
+            "text": "Brake System Warning Light",
+            "body": [
+              {
+                "type": "p",
+                "text": "What it means: This can indicate low brake fluid, worn brake pads, or an issue with the ABS system."
+              },
+              {
+                "type": "p",
+                "text": "Possible causes:"
+              },
+              {
+                "type": "ul",
+                "items": [
+                  "Low brake fluid",
+                  "Faulty brake sensors",
+                  "ABS malfunction",
+                  "Brake system leak"
+                ]
+              },
+              {
+                "type": "p",
+                "text": "Severity: High. Your ability to stop may be compromised. Schedule a brake inspection and computer diagnostics with our expert brake repair crew to determine the exact cause."
+              }
+            ]
+          },
+          {
+            "text": "ABS Warning Light (Anti-lock Braking System)",
+            "body": [
+              {
+                "type": "p",
+                "text": "What it means: The ABS is malfunctioning, but your vehicle’s normal brakes may still work."
+              },
+              {
+                "type": "p",
+                "text": "Possible causes:"
+              },
+              {
+                "type": "ul",
+                "items": [
+                  "A broken wheel speed sensor",
+                  "Damaged wiring",
+                  "ABS module failure"
+                ]
+              },
+              {
+                "type": "p",
+                "text": "Severity: Medium. While your vehicle’s standard brake system may still function, ABS is critical for safe stopping under harsh conditions like rain or ice."
+              }
+            ]
+          },
+          {
+            "text": "Coolant Temperature Warning Light",
+            "body": [
+              {
+                "type": "p",
+                "text": "What it means: The engine is overheating."
+              },
+              {
+                "type": "p",
+                "text": "Possible causes:"
+              },
+              {
+                "type": "ul",
+                "items": [
+                  "Low coolant",
+                  "A faulty thermostat",
+                  "Radiator issues",
+                  "A failing water pump."
+                ]
+              },
+              {
+                "type": "p",
+                "text": "Severity: High. Pull over immediately and shut off the engine. Driving while overheating can cause irreversible engine damage."
+              }
+            ]
+          },
+          {
+            "text": "Tire Pressure Monitoring System (TPMS) Light",
+            "body": [
+              {
+                "type": "p",
+                "text": "What it means: At least one of your vehicle’s tires is underinflated."
+              },
+              {
+                "type": "p",
+                "text": "Possible causes:"
+              },
+              {
+                "type": "ul",
+                "items": [
+                  "Low tire pressure",
+                  "Faulty TPMS sensor"
+                ]
+              },
+              {
+                "type": "p",
+                "text": "Severity: Low to medium. Driving with low tire pressure affects fuel economy and handling. Check your vehicle’s tires and refill or repair as needed."
+              }
+            ]
+          },
+          {
+            "text": "Airbag Warning Light",
+            "body": [
+              {
+                "type": "p",
+                "text": "What it means: There’s a fault in the airbag system."
+              },
+              {
+                "type": "p",
+                "text": "Possible causes:"
+              },
+              {
+                "type": "ul",
+                "items": [
+                  "Sensor failure",
+                  "A faulty airbag module",
+                  "Damaged wiring"
+                ]
+              },
+              {
+                "type": "p",
+                "text": "Severity: High. The airbag system may not deploy during a crash. Schedule an electronic diagnostic at Newby's Automotive Ctr to check right away."
+              }
+            ]
+          },
+          {
+            "text": "Transmission Temperature Warning Light",
+            "body": [
+              {
+                "type": "p",
+                "text": "What it means: Your transmission is running too hot."
+              },
+              {
+                "type": "p",
+                "text": "Possible causes:"
+              },
+              {
+                "type": "ul",
+                "items": [
+                  "Low transmission fluid",
+                  "Blocked cooler lines",
+                  "Overloaded vehicle"
+                ]
+              },
+              {
+                "type": "p",
+                "text": "Severity: High. Overheating can cause major transmission damage. Stop driving and check fluid levels if you’re able or seek our professionals for computer diagnostics."
+              }
+            ]
+          },
+          {
+            "text": "Service Vehicle Soon / Maintenance Light",
+            "body": [
+              {
+                "type": "p",
+                "text": "What it means: This is a reminder to perform scheduled maintenance, like oil changes or fluid checks."
+              },
+              {
+                "type": "p",
+                "text": "Severity: Low. This is more of a gentle nudge than an emergency. Still, staying on top of regular maintenance can prevent many of the issues that trigger more severe warning lights."
+              }
+            ]
+          }
         ]
-      },
-      {
-        "type": "p",
-        "text": "Severity: Varies. A flashing light often means a serious issue like a misfire, while a steady light could indicate a minor problem. Either way, it’s best to schedule computer diagnostics with the professionals at Newby's Automotive Ctr to find the exact trouble code."
-      },
-      {
-        "type": "p",
-        "text": "2. Battery Warning Light"
-      },
-      {
-        "type": "p",
-        "text": "What it means: This light signals an issue with the vehicle’s charging system."
-      },
-      {
-        "type": "p",
-        "text": "Possible causes:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "A failing alternator",
-          "A dead battery",
-          "Loose or corroded battery terminals",
-          "A faulty wiring or serpentine belt"
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Severity: Moderate to high. Your vehicle may continue to run briefly but will eventually lose electrical power. Get a battery diagnostic immediately by scheduling an appointment on our website today."
-      },
-      {
-        "type": "p",
-        "text": "3. Oil Pressure Warning Light"
-      },
-      {
-        "type": "p",
-        "text": "What it means: This light appears when oil pressure drops below the optimal level."
-      },
-      {
-        "type": "p",
-        "text": "Possible causes:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Low oil level",
-          "Oil pump failure",
-          "A blocked oil filter",
-          "Worn engine components"
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Severity: Critical. Stop your vehicle immediately and check the oil. Continuing to drive can cause severe engine damage."
-      },
-      {
-        "type": "p",
-        "text": "4. Brake System Warning Light"
-      },
-      {
-        "type": "p",
-        "text": "What it means: This can indicate low brake fluid, worn brake pads, or an issue with the ABS system."
-      },
-      {
-        "type": "p",
-        "text": "Possible causes:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Low brake fluid",
-          "Faulty brake sensors",
-          "ABS malfunction",
-          "Brake system leak"
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Severity: High. Your ability to stop may be compromised. Schedule a brake inspection and computer diagnostics with our expert brake repair crew to determine the exact cause."
-      },
-      {
-        "type": "p",
-        "text": "5. ABS Warning Light (Anti-lock Braking System)"
-      },
-      {
-        "type": "p",
-        "text": "What it means: The ABS is malfunctioning, but your vehicle’s normal brakes may still work."
-      },
-      {
-        "type": "p",
-        "text": "Possible causes:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "A broken wheel speed sensor",
-          "Damaged wiring",
-          "ABS module failure"
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Severity: Medium. While your vehicle’s standard brake system may still function, ABS is critical for safe stopping under harsh conditions like rain or ice."
-      },
-      {
-        "type": "p",
-        "text": "6. Coolant Temperature Warning Light"
-      },
-      {
-        "type": "p",
-        "text": "What it means: The engine is overheating."
-      },
-      {
-        "type": "p",
-        "text": "Possible causes:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Low coolant",
-          "A faulty thermostat",
-          "Radiator issues",
-          "A failing water pump."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Severity: High. Pull over immediately and shut off the engine. Driving while overheating can cause irreversible engine damage."
-      },
-      {
-        "type": "p",
-        "text": "7. Tire Pressure Monitoring System (TPMS) Light"
-      },
-      {
-        "type": "p",
-        "text": "What it means: At least one of your vehicle’s tires is underinflated."
-      },
-      {
-        "type": "p",
-        "text": "Possible causes:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Low tire pressure",
-          "Faulty TPMS sensor"
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Severity: Low to medium. Driving with low tire pressure affects fuel economy and handling. Check your vehicle’s tires and refill or repair as needed."
-      },
-      {
-        "type": "p",
-        "text": "8. Airbag Warning Light"
-      },
-      {
-        "type": "p",
-        "text": "What it means: There’s a fault in the airbag system."
-      },
-      {
-        "type": "p",
-        "text": "Possible causes:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Sensor failure",
-          "A faulty airbag module",
-          "Damaged wiring"
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Severity: High. The airbag system may not deploy during a crash. Schedule an electronic diagnostic at Newby's Automotive Ctr to check right away."
-      },
-      {
-        "type": "p",
-        "text": "9. Transmission Temperature Warning Light"
-      },
-      {
-        "type": "p",
-        "text": "What it means: Your transmission is running too hot."
-      },
-      {
-        "type": "p",
-        "text": "Possible causes:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Low transmission fluid",
-          "Blocked cooler lines",
-          "Overloaded vehicle"
-        ]
-      },
-      {
-        "type": "p",
-        "text": "Severity: High. Overheating can cause major transmission damage. Stop driving and check fluid levels if you’re able or seek our professionals for computer diagnostics."
-      },
-      {
-        "type": "p",
-        "text": "10. Service Vehicle Soon / Maintenance Light"
-      },
-      {
-        "type": "p",
-        "text": "What it means: This is a reminder to perform scheduled maintenance, like oil changes or fluid checks."
-      },
-      {
-        "type": "p",
-        "text": "Severity: Low. This is more of a gentle nudge than an emergency. Still, staying on top of regular maintenance can prevent many of the issues that trigger more severe warning lights."
       },
       {
         "type": "h",
@@ -1157,87 +1173,99 @@ export const articles: Article[] = [
         "text": "Common Types of Vehicle Fluids and Their Roles"
       },
       {
-        "type": "p",
-        "text": "1. Engine Oil"
-      },
-      {
-        "type": "ul",
+        "type": "ol",
         "items": [
-          "System: Engine",
-          "Purpose: Lubricates moving parts, reduces friction, dissipates heat, and protects against corrosion.",
-          "What Happens Without Maintenance: Old oil becomes thick and contaminated, which can lead to engine overheating, internal wear, and eventually, engine failure."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "2. Transmission Fluid"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "System: Automatic or manual transmission",
-          "Purpose: Cools and lubricates the transmission components while enabling smooth gear shifts.",
-          "What Happens Without a Transmission Fluid Flush: Dirty or low fluid can cause gear slipping, grinding, overheating, and eventual transmission failure, which is one of the most expensive repairs."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "3. Coolant / Antifreeze"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "System: Cooling system",
-          "Purpose: Regulates engine temperature, prevents freezing/overheating, and protects against corrosion in the radiator and water pump.",
-          "What Happens Without a Coolant Flush: Corrosion, coolant leaks, water pump failure, and cracked engine blocks due to extreme temperatures."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "4. Brake Fluid"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "System: Brake system",
-          "Purpose: Transfers force from the brake pedal to the brake calipers via hydraulic pressure.",
-          "What Happens Without a Brake Fluid Flush: Moisture buildup can cause brake failure, soft brake pedals, or corrosion in the master cylinder and brake lines."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "5. Power Steering Fluid"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "System: Steering system",
-          "Purpose: Enables smooth steering by creating hydraulic pressure.",
-          "What Happens Without a Power Steering Flush: Contaminated fluid can lead to hard turning, noisy steering, pump damage, and complete steering failure."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "6. Differential Fluid"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "System: Differential / drivetrain",
-          "Purpose: Lubricates the gears and bearings in the differential, especially important for trucks and rear-wheel-drive vehicles.",
-          "What Happens Without Maintenance: Metal-on-metal contact can destroy the gears and lead to costly rebuilds or replacements."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "7. Windshield Washer Fluid"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "System: Visibility system",
-          "Purpose: Cleans your windshield to ensure clear vision.",
-          "What Happens Without It: Poor visibility and unsafe driving conditions, especially in bad weather."
+          {
+            "text": "Engine Oil",
+            "body": [
+              {
+                "type": "ul",
+                "items": [
+                  "System: Engine",
+                  "Purpose: Lubricates moving parts, reduces friction, dissipates heat, and protects against corrosion.",
+                  "What Happens Without Maintenance: Old oil becomes thick and contaminated, which can lead to engine overheating, internal wear, and eventually, engine failure."
+                ]
+              }
+            ]
+          },
+          {
+            "text": "Transmission Fluid",
+            "body": [
+              {
+                "type": "ul",
+                "items": [
+                  "System: Automatic or manual transmission",
+                  "Purpose: Cools and lubricates the transmission components while enabling smooth gear shifts.",
+                  "What Happens Without a Transmission Fluid Flush: Dirty or low fluid can cause gear slipping, grinding, overheating, and eventual transmission failure, which is one of the most expensive repairs."
+                ]
+              }
+            ]
+          },
+          {
+            "text": "Coolant / Antifreeze",
+            "body": [
+              {
+                "type": "ul",
+                "items": [
+                  "System: Cooling system",
+                  "Purpose: Regulates engine temperature, prevents freezing/overheating, and protects against corrosion in the radiator and water pump.",
+                  "What Happens Without a Coolant Flush: Corrosion, coolant leaks, water pump failure, and cracked engine blocks due to extreme temperatures."
+                ]
+              }
+            ]
+          },
+          {
+            "text": "Brake Fluid",
+            "body": [
+              {
+                "type": "ul",
+                "items": [
+                  "System: Brake system",
+                  "Purpose: Transfers force from the brake pedal to the brake calipers via hydraulic pressure.",
+                  "What Happens Without a Brake Fluid Flush: Moisture buildup can cause brake failure, soft brake pedals, or corrosion in the master cylinder and brake lines."
+                ]
+              }
+            ]
+          },
+          {
+            "text": "Power Steering Fluid",
+            "body": [
+              {
+                "type": "ul",
+                "items": [
+                  "System: Steering system",
+                  "Purpose: Enables smooth steering by creating hydraulic pressure.",
+                  "What Happens Without a Power Steering Flush: Contaminated fluid can lead to hard turning, noisy steering, pump damage, and complete steering failure."
+                ]
+              }
+            ]
+          },
+          {
+            "text": "Differential Fluid",
+            "body": [
+              {
+                "type": "ul",
+                "items": [
+                  "System: Differential / drivetrain",
+                  "Purpose: Lubricates the gears and bearings in the differential, especially important for trucks and rear-wheel-drive vehicles.",
+                  "What Happens Without Maintenance: Metal-on-metal contact can destroy the gears and lead to costly rebuilds or replacements."
+                ]
+              }
+            ]
+          },
+          {
+            "text": "Windshield Washer Fluid",
+            "body": [
+              {
+                "type": "ul",
+                "items": [
+                  "System: Visibility system",
+                  "Purpose: Cleans your windshield to ensure clear vision.",
+                  "What Happens Without It: Poor visibility and unsafe driving conditions, especially in bad weather."
+                ]
+              }
+            ]
+          }
         ]
       },
       {
@@ -1408,52 +1436,63 @@ export const articles: Article[] = [
         "text": "Like most parts, your vehicle’s water pump will give warning signs before it fails completely. Here’s what to look for:"
       },
       {
-        "type": "p",
-        "text": "1. Coolant Leaks"
-      },
-      {
-        "type": "p",
-        "text": "If you notice puddles of coolant under your vehicle, especially near the front-center, your water pump may be leaking from the weep hole or gasket."
-      },
-      {
-        "type": "p",
-        "text": "2. Overheating Engine"
-      },
-      {
-        "type": "p",
-        "text": "A clear sign that coolant isn’t circulating properly. This could be due to a stuck impeller, failed bearing, or internal blockage in the pump."
-      },
-      {
-        "type": "p",
-        "text": "3. Whining or Grinding Noises"
-      },
-      {
-        "type": "p",
-        "text": "A failing bearing inside the pump can create high-pitched whining or grinding sounds, especially as engine RPMs increase."
-      },
-      {
-        "type": "p",
-        "text": "4. Steam From the Radiator or Hood"
-      },
-      {
-        "type": "p",
-        "text": "If your engine is overheating and the coolant is boiling, you may see steam escaping under pressure."
-      },
-      {
-        "type": "p",
-        "text": "5. Rust or Corrosion"
-      },
-      {
-        "type": "p",
-        "text": "If you spot rust or buildup around the water pump housing, it may indicate a slow leak, often caused by a failed gasket or worn seal."
-      },
-      {
-        "type": "p",
-        "text": "6. Dashboard Warning Lights"
-      },
-      {
-        "type": "p",
-        "text": "Modern vehicles may illuminate the temperature warning light or trigger a “Check Engine” light if engine temperatures become unstable."
+        "type": "ol",
+        "items": [
+          {
+            "text": "Coolant Leaks",
+            "body": [
+              {
+                "type": "p",
+                "text": "If you notice puddles of coolant under your vehicle, especially near the front-center, your water pump may be leaking from the weep hole or gasket."
+              }
+            ]
+          },
+          {
+            "text": "Overheating Engine",
+            "body": [
+              {
+                "type": "p",
+                "text": "A clear sign that coolant isn’t circulating properly. This could be due to a stuck impeller, failed bearing, or internal blockage in the pump."
+              }
+            ]
+          },
+          {
+            "text": "Whining or Grinding Noises",
+            "body": [
+              {
+                "type": "p",
+                "text": "A failing bearing inside the pump can create high-pitched whining or grinding sounds, especially as engine RPMs increase."
+              }
+            ]
+          },
+          {
+            "text": "Steam From the Radiator or Hood",
+            "body": [
+              {
+                "type": "p",
+                "text": "If your engine is overheating and the coolant is boiling, you may see steam escaping under pressure."
+              }
+            ]
+          },
+          {
+            "text": "Rust or Corrosion",
+            "body": [
+              {
+                "type": "p",
+                "text": "If you spot rust or buildup around the water pump housing, it may indicate a slow leak, often caused by a failed gasket or worn seal."
+              }
+            ]
+          },
+          {
+            "text": "Dashboard Warning Lights",
+            "body": [
+              {
+                "type": "p",
+                "text": "Modern vehicles may illuminate the temperature warning light or trigger a “Check Engine” light if engine temperatures become unstable."
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "h",
@@ -1533,99 +1572,109 @@ export const articles: Article[] = [
         "text": "Here are the most important symptoms to watch for:"
       },
       {
-        "type": "p",
-        "text": "1.Slipping Gears: When your vehicle suddenly changes gears without input (especially in automatics), or if it seems to slip out of gear while driving, it’s a serious red flag."
-      },
-      {
-        "type": "p",
-        "text": "What to notice:"
-      },
-      {
-        "type": "ul",
+        "type": "ol",
         "items": [
-          "RPMs spike unexpectedly",
-          "Loss of acceleration",
-          "Engine revs but vehicle doesn’t move accordingly"
+          {
+            "text": "Slipping Gears: When your vehicle suddenly changes gears without input (especially in automatics), or if it seems to slip out of gear while driving, it’s a serious red flag.",
+            "body": [
+              {
+                "type": "p",
+                "text": "What to notice:"
+              },
+              {
+                "type": "ul",
+                "items": [
+                  "RPMs spike unexpectedly",
+                  "Loss of acceleration",
+                  "Engine revs but vehicle doesn’t move accordingly"
+                ]
+              }
+            ]
+          },
+          {
+            "text": "Delayed or Rough Shifting: If you experience hesitation, jerking, or hard shifts when changing gears, your transmission could be struggling.",
+            "body": [
+              {
+                "type": "p",
+                "text": "Especially noticeable when:"
+              },
+              {
+                "type": "ul",
+                "items": [
+                  "Shifting from park to drive or reverse",
+                  "Accelerating onto highways",
+                  "Coming to a stop or starting from one"
+                ]
+              }
+            ]
+          },
+          {
+            "text": "Unusual Noises: Strange sounds are often an early indicator.",
+            "body": [
+              {
+                "type": "p",
+                "text": "Pay attention to:"
+              },
+              {
+                "type": "ul",
+                "items": [
+                  "Grinding (manual transmission)",
+                  "Whining, humming, or clunking (automatic transmission)",
+                  "Clicking or buzzing while in gear"
+                ]
+              }
+            ]
+          },
+          {
+            "text": "Transmission Fluid Leaks: Transmission fluid is essential for lubricating gears, cooling components, and maintaining hydraulic pressure.",
+            "body": [
+              {
+                "type": "p",
+                "text": "Look for:"
+              },
+              {
+                "type": "ul",
+                "items": [
+                  "Red or brown puddles under the vehicle",
+                  "Low fluid levels on your transmission dipstick",
+                  "Burning smell (often from overheated or old fluid)"
+                ]
+              }
+            ]
+          },
+          {
+            "text": "Check Engine Light: Many modern vehicles have sensors that monitor the transmission.",
+            "body": [
+              {
+                "type": "p",
+                "text": "If the check engine light comes on:"
+              },
+              {
+                "type": "ul",
+                "items": [
+                  "Use an OBD-II scanner or visit a mechanic",
+                  "Transmission trouble codes (like P0700) may appear"
+                ]
+              }
+            ]
+          },
+          {
+            "text": "Unresponsive Transmission: If your vehicle won’t move after you shift into gear, or hesitates significantly before doing so, this points to serious issues with the internal mechanics or electronics of the transmission and Newby's Automotive Ctr can help.",
+            "body": []
+          },
+          {
+            "text": "Burning Smell: A hot, acrid odor (especially when paired with slipping or leaking) can signal overheated transmission fluid or friction between gears.",
+            "body": []
+          },
+          {
+            "text": "Grinding or Shaking: In manual transmissions, worn-out clutches or synchronizers can cause grinding when shifting. In automatics, rough gear changes may feel like the vehicle is shaking.",
+            "body": []
+          },
+          {
+            "text": "Noise in Neutral: Hearing unusual sounds while your vehicle is in neutral can still point to worn bearings, low fluid, or internal damage.",
+            "body": []
+          }
         ]
-      },
-      {
-        "type": "p",
-        "text": "2. Delayed or Rough Shifting: If you experience hesitation, jerking, or hard shifts when changing gears, your transmission could be struggling."
-      },
-      {
-        "type": "p",
-        "text": "Especially noticeable when:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Shifting from park to drive or reverse",
-          "Accelerating onto highways",
-          "Coming to a stop or starting from one"
-        ]
-      },
-      {
-        "type": "p",
-        "text": "3. Unusual Noises: Strange sounds are often an early indicator."
-      },
-      {
-        "type": "p",
-        "text": "Pay attention to:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Grinding (manual transmission)",
-          "Whining, humming, or clunking (automatic transmission)",
-          "Clicking or buzzing while in gear"
-        ]
-      },
-      {
-        "type": "p",
-        "text": "4. Transmission Fluid Leaks: Transmission fluid is essential for lubricating gears, cooling components, and maintaining hydraulic pressure."
-      },
-      {
-        "type": "p",
-        "text": "Look for:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Red or brown puddles under the vehicle",
-          "Low fluid levels on your transmission dipstick",
-          "Burning smell (often from overheated or old fluid)"
-        ]
-      },
-      {
-        "type": "p",
-        "text": "5. Check Engine Light: Many modern vehicles have sensors that monitor the transmission."
-      },
-      {
-        "type": "p",
-        "text": "If the check engine light comes on:"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Use an OBD-II scanner or visit a mechanic",
-          "Transmission trouble codes (like P0700) may appear"
-        ]
-      },
-      {
-        "type": "p",
-        "text": "6. Unresponsive Transmission: If your vehicle won’t move after you shift into gear, or hesitates significantly before doing so, this points to serious issues with the internal mechanics or electronics of the transmission and Newby's Automotive Ctr can help."
-      },
-      {
-        "type": "p",
-        "text": "7. Burning Smell: A hot, acrid odor (especially when paired with slipping or leaking) can signal overheated transmission fluid or friction between gears."
-      },
-      {
-        "type": "p",
-        "text": "8. Grinding or Shaking: In manual transmissions, worn-out clutches or synchronizers can cause grinding when shifting. In automatics, rough gear changes may feel like the vehicle is shaking."
-      },
-      {
-        "type": "p",
-        "text": "9. Noise in Neutral: Hearing unusual sounds while your vehicle is in neutral can still point to worn bearings, low fluid, or internal damage."
       },
       {
         "type": "h",
@@ -1945,78 +1994,91 @@ export const articles: Article[] = [
         "text": "Most people are familiar with the spark-plug replacement portion of auto tune ups, but fail to realize that tune-ups involve the inspection of many other vehicle parts and components. For instance, professional auto tune ups at Newby's Automotive Ctr typically include:"
       },
       {
-        "type": "p",
-        "text": "1. Spark Plug Inspection and Replacement"
-      },
-      {
-        "type": "p",
-        "text": "Spark plugs ignite the air-fuel mixture in your engine. Over time, they wear out and can lead to poor fuel economy, rough idling, and difficulty starting your car. Replacing old spark plugs restores power and efficiency."
-      },
-      {
-        "type": "p",
-        "text": "2. Ignition System Check"
-      },
-      {
-        "type": "p",
-        "text": "Your ignition coils and wires are checked for damage or corrosion. Faulty ignition components can cause misfires, reduced engine performance, and higher emissions."
-      },
-      {
-        "type": "p",
-        "text": "3. Air and Fuel Filter Replacement"
-      },
-      {
-        "type": "p",
-        "text": "A clean air filter ensures optimal airflow to your engine, improving fuel efficiency and power. Similarly, a new fuel filter helps prevent debris from clogging the fuel injectors and affecting performance."
-      },
-      {
-        "type": "p",
-        "text": "4. Fuel System Cleaning"
-      },
-      {
-        "type": "p",
-        "text": "Over time, deposits build up in the fuel injectors and throttle body, reducing efficiency. A professional fuel system cleaning at Newby's Automotive Ctr enhances fuel delivery, improves combustion, and restores lost power."
-      },
-      {
-        "type": "p",
-        "text": "5. Checking and Topping Off Fluids"
-      },
-      {
-        "type": "p",
-        "text": "Tune-ups often include checking and replenishing essential fluids such as:"
-      },
-      {
-        "type": "ul",
+        "type": "ol",
         "items": [
-          "Engine oil – Lubricates engine components and reduces friction.",
-          "Transmission fluid – Ensures smooth gear shifts and prevents overheating.",
-          "Coolant/Antifreeze – Regulates engine temperature and prevents corrosion.",
-          "Brake fluid – Maintains braking performance and safety.",
-          "Power steering fluid – Ensures responsive steering control."
+          {
+            "text": "Spark Plug Inspection and Replacement",
+            "body": [
+              {
+                "type": "p",
+                "text": "Spark plugs ignite the air-fuel mixture in your engine. Over time, they wear out and can lead to poor fuel economy, rough idling, and difficulty starting your car. Replacing old spark plugs restores power and efficiency."
+              }
+            ]
+          },
+          {
+            "text": "Ignition System Check",
+            "body": [
+              {
+                "type": "p",
+                "text": "Your ignition coils and wires are checked for damage or corrosion. Faulty ignition components can cause misfires, reduced engine performance, and higher emissions."
+              }
+            ]
+          },
+          {
+            "text": "Air and Fuel Filter Replacement",
+            "body": [
+              {
+                "type": "p",
+                "text": "A clean air filter ensures optimal airflow to your engine, improving fuel efficiency and power. Similarly, a new fuel filter helps prevent debris from clogging the fuel injectors and affecting performance."
+              }
+            ]
+          },
+          {
+            "text": "Fuel System Cleaning",
+            "body": [
+              {
+                "type": "p",
+                "text": "Over time, deposits build up in the fuel injectors and throttle body, reducing efficiency. A professional fuel system cleaning at Newby's Automotive Ctr enhances fuel delivery, improves combustion, and restores lost power."
+              }
+            ]
+          },
+          {
+            "text": "Checking and Topping Off Fluids",
+            "body": [
+              {
+                "type": "p",
+                "text": "Tune-ups often include checking and replenishing essential fluids such as:"
+              },
+              {
+                "type": "ul",
+                "items": [
+                  "Engine oil – Lubricates engine components and reduces friction.",
+                  "Transmission fluid – Ensures smooth gear shifts and prevents overheating.",
+                  "Coolant/Antifreeze – Regulates engine temperature and prevents corrosion.",
+                  "Brake fluid – Maintains braking performance and safety.",
+                  "Power steering fluid – Ensures responsive steering control."
+                ]
+              }
+            ]
+          },
+          {
+            "text": "Belt and Hose Inspection",
+            "body": [
+              {
+                "type": "p",
+                "text": "Cracked or worn-out belts and hoses can lead to engine overheating, loss of power steering, or even complete engine failure. Our technicians check for wear and replace any necessary components."
+              }
+            ]
+          },
+          {
+            "text": "Battery and Charging System Test",
+            "body": [
+              {
+                "type": "p",
+                "text": "A weak or corroded battery can lead to unexpected breakdowns. During our tune-up service, your battery’s charge level, terminals, and alternator are inspected to prevent starting issues."
+              }
+            ]
+          },
+          {
+            "text": "Tire Pressure and Alignment Check",
+            "body": [
+              {
+                "type": "p",
+                "text": "Properly inflated tires and correct alignment improve fuel economy and handling, reducing premature wear on your tires and suspension components."
+              }
+            ]
+          }
         ]
-      },
-      {
-        "type": "p",
-        "text": "6. Belt and Hose Inspection"
-      },
-      {
-        "type": "p",
-        "text": "Cracked or worn-out belts and hoses can lead to engine overheating, loss of power steering, or even complete engine failure. Our technicians check for wear and replace any necessary components."
-      },
-      {
-        "type": "p",
-        "text": "7. Battery and Charging System Test"
-      },
-      {
-        "type": "p",
-        "text": "A weak or corroded battery can lead to unexpected breakdowns. During our tune-up service, your battery’s charge level, terminals, and alternator are inspected to prevent starting issues."
-      },
-      {
-        "type": "p",
-        "text": "8. Tire Pressure and Alignment Check"
-      },
-      {
-        "type": "p",
-        "text": "Properly inflated tires and correct alignment improve fuel economy and handling, reducing premature wear on your tires and suspension components."
       },
       {
         "type": "h",
@@ -2078,68 +2140,81 @@ export const articles: Article[] = [
         "text": "The Spring into Action Checklist"
       },
       {
-        "type": "p",
-        "text": "1. Check and Replace Wiper Blades"
-      },
-      {
-        "type": "p",
-        "text": "Winter weather takes a toll on your windshield wipers. Snow, ice, and freezing temperatures can cause the rubber to crack and wear out. Spring showers demand a clear windshield, so inspect your wipers and replace them if they’re leaving streaks or skipping across the glass. Fresh wiper blades improve visibility and safety during rainy conditions."
-      },
-      {
-        "type": "p",
-        "text": "2. Inspect Your Tires"
-      },
-      {
-        "type": "p",
-        "text": "Cold temperatures can cause tire pressure to drop, and potholes from winter road damage can affect wheel alignment and balance. As the weather warms up, check your tire pressure and adjust it according to your vehicle’s recommended PSI. Also, inspect the tread depth and look for signs of uneven wear, which could indicate alignment or suspension issues. If you switched to winter tires, now is the time to swap back to all-season or summer tires for optimal performance."
-      },
-      {
-        "type": "p",
-        "text": "3. Check Your Battery"
-      },
-      {
-        "type": "p",
-        "text": "Your car’s battery works harder during the winter, and cold temperatures can weaken its charge. Spring is the perfect time to test your battery’s voltage and ensure it’s holding a proper charge. Look for corrosion on the terminals and clean them if necessary. If your battery is more than three years old or struggling to start your vehicle, consider replacing it with the experts at Newby's Automotive Ctr to avoid unexpected breakdowns."
-      },
-      {
-        "type": "p",
-        "text": "4. Schedule an Oil Change and Fluid Check"
-      },
-      {
-        "type": "p",
-        "text": "Routine oil changes are essential for maintaining your engine’s health. After a long winter, it’s a good idea to check all your vehicle’s fluids, including engine oil, transmission fluid, brake fluid, coolant, and windshield washer fluid. Clean and fresh fluids keep your vehicle running smoothly and help prevent overheating as temperatures rise."
-      },
-      {
-        "type": "p",
-        "text": "5. Inspect Your Brakes"
-      },
-      {
-        "type": "p",
-        "text": "Your brakes are one of the most critical safety components of your vehicle. Winter driving conditions, including road salt and slush, can accelerate brake wear. Have a professional at Newby's Automotive Ctr inspect your brake pads, rotors, and brake fluid to ensure everything is in working order. If you hear squeaking or grinding noises, experience vibration while braking, or notice longer stopping distances, schedule a brake service immediately."
-      },
-      {
-        "type": "p",
-        "text": "6. Test Your Air Conditioning System"
-      },
-      {
-        "type": "p",
-        "text": "Spring means warmer temperatures, and you don’t want to be caught without a functioning A/C when summer heat arrives. Test your air conditioning system to make sure it’s blowing cold air. If you notice weak airflow or warm air, it may be time for an A/C recharge or inspection to check for refrigerant leaks or faulty components."
-      },
-      {
-        "type": "p",
-        "text": "7. Check Your Suspension and Alignment"
-      },
-      {
-        "type": "p",
-        "text": "Winter’s potholes and rough roads can wreak havoc on your suspension system. If you notice your car pulling to one side, uneven tire wear, or a rough ride, it’s time for a suspension inspection and wheel alignment and the experts at Newby's Automotive Ctr can help. Proper alignment improves fuel efficiency, prolongs tire life, and ensures a smooth driving experience."
-      },
-      {
-        "type": "p",
-        "text": "8. Wash and Wax Your Car, Truck, or SUV"
-      },
-      {
-        "type": "p",
-        "text": "Winter grime, road salt, and debris can damage your vehicle’s paint and undercarriage. Give your car, truck, or SUV a thorough wash, including the underbody, to remove corrosive residue. Applying a fresh coat of wax protects your paint job and keeps your car looking great as you hit the road this spring."
+        "type": "ol",
+        "items": [
+          {
+            "text": "Check and Replace Wiper Blades",
+            "body": [
+              {
+                "type": "p",
+                "text": "Winter weather takes a toll on your windshield wipers. Snow, ice, and freezing temperatures can cause the rubber to crack and wear out. Spring showers demand a clear windshield, so inspect your wipers and replace them if they’re leaving streaks or skipping across the glass. Fresh wiper blades improve visibility and safety during rainy conditions."
+              }
+            ]
+          },
+          {
+            "text": "Inspect Your Tires",
+            "body": [
+              {
+                "type": "p",
+                "text": "Cold temperatures can cause tire pressure to drop, and potholes from winter road damage can affect wheel alignment and balance. As the weather warms up, check your tire pressure and adjust it according to your vehicle’s recommended PSI. Also, inspect the tread depth and look for signs of uneven wear, which could indicate alignment or suspension issues. If you switched to winter tires, now is the time to swap back to all-season or summer tires for optimal performance."
+              }
+            ]
+          },
+          {
+            "text": "Check Your Battery",
+            "body": [
+              {
+                "type": "p",
+                "text": "Your car’s battery works harder during the winter, and cold temperatures can weaken its charge. Spring is the perfect time to test your battery’s voltage and ensure it’s holding a proper charge. Look for corrosion on the terminals and clean them if necessary. If your battery is more than three years old or struggling to start your vehicle, consider replacing it with the experts at Newby's Automotive Ctr to avoid unexpected breakdowns."
+              }
+            ]
+          },
+          {
+            "text": "Schedule an Oil Change and Fluid Check",
+            "body": [
+              {
+                "type": "p",
+                "text": "Routine oil changes are essential for maintaining your engine’s health. After a long winter, it’s a good idea to check all your vehicle’s fluids, including engine oil, transmission fluid, brake fluid, coolant, and windshield washer fluid. Clean and fresh fluids keep your vehicle running smoothly and help prevent overheating as temperatures rise."
+              }
+            ]
+          },
+          {
+            "text": "Inspect Your Brakes",
+            "body": [
+              {
+                "type": "p",
+                "text": "Your brakes are one of the most critical safety components of your vehicle. Winter driving conditions, including road salt and slush, can accelerate brake wear. Have a professional at Newby's Automotive Ctr inspect your brake pads, rotors, and brake fluid to ensure everything is in working order. If you hear squeaking or grinding noises, experience vibration while braking, or notice longer stopping distances, schedule a brake service immediately."
+              }
+            ]
+          },
+          {
+            "text": "Test Your Air Conditioning System",
+            "body": [
+              {
+                "type": "p",
+                "text": "Spring means warmer temperatures, and you don’t want to be caught without a functioning A/C when summer heat arrives. Test your air conditioning system to make sure it’s blowing cold air. If you notice weak airflow or warm air, it may be time for an A/C recharge or inspection to check for refrigerant leaks or faulty components."
+              }
+            ]
+          },
+          {
+            "text": "Check Your Suspension and Alignment",
+            "body": [
+              {
+                "type": "p",
+                "text": "Winter’s potholes and rough roads can wreak havoc on your suspension system. If you notice your car pulling to one side, uneven tire wear, or a rough ride, it’s time for a suspension inspection and wheel alignment and the experts at Newby's Automotive Ctr can help. Proper alignment improves fuel efficiency, prolongs tire life, and ensures a smooth driving experience."
+              }
+            ]
+          },
+          {
+            "text": "Wash and Wax Your Car, Truck, or SUV",
+            "body": [
+              {
+                "type": "p",
+                "text": "Winter grime, road salt, and debris can damage your vehicle’s paint and undercarriage. Give your car, truck, or SUV a thorough wash, including the underbody, to remove corrosive residue. Applying a fresh coat of wax protects your paint job and keeps your car looking great as you hit the road this spring."
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "h",
@@ -2525,68 +2600,81 @@ export const articles: Article[] = [
         "text": "The transmission transfers power from the engine to the wheels, enabling your vehicle to move. In manual vehicles, the clutch connects and disconnects the engine’s power to the transmission, allowing gear changes. For automatic transmissions, the torque converter performs a similar function. Maintaining these systems is essential for efficiency, safety, and cost-effectiveness."
       },
       {
-        "type": "p",
-        "text": "1. Regular Maintenance is Key"
-      },
-      {
-        "type": "p",
-        "text": "Schedule routine transmission service, including fluid checks and replacements. Transmission fluid lubricates and cools components, reducing friction and wear. For manual transmissions, ensure the clutch fluid is at optimal levels. Neglecting fluid maintenance can lead to overheating, slipping gears, or complete transmission failure. Allow the technicians at Newby's Automotive Ctr handle your transmission fluid maintenance needs by visiting our website to request service, Newby's Automotive Ctr, or giving us a call."
-      },
-      {
-        "type": "p",
-        "text": "2. Avoid Riding the Clutch"
-      },
-      {
-        "type": "p",
-        "text": "Manual transmission drivers often fall into the habit of \"riding the clutch,\" keeping the pedal partially engaged while driving. This practice increases friction and heat, leading to premature clutch wear. Instead, fully release the clutch after shifting and use the handbrake on inclines to prevent rollback."
-      },
-      {
-        "type": "p",
-        "text": "3. Shift Gears Smoothly"
-      },
-      {
-        "type": "p",
-        "text": "Whether driving a manual or automatic vehicle, harsh or rapid gear changes put extra stress on the transmission. In manual cars, practice smooth engagement of the clutch and match engine speed to the desired gear. Automatic drivers should avoid rapid acceleration or unnecessary downshifting."
-      },
-      {
-        "type": "p",
-        "text": "4. Keep an Eye on Transmission Fluid"
-      },
-      {
-        "type": "p",
-        "text": "Transmission fluid should be clean and at the correct level. Dirty or burnt fluid can indicate internal problems and accelerate wear. Allow the maintenance mechanics at Newby's Automotive Ctr to check your vehicle’s owner manual for recommended intervals for fluid changes. We’ll always use the type specified by the manufacturer."
-      },
-      {
-        "type": "p",
-        "text": "5. Don’t Overload Your Vehicle"
-      },
-      {
-        "type": "p",
-        "text": "Overloading strains the transmission and clutch, as they must work harder to move the vehicle. Avoid exceeding the maximum weight capacity specified in your owner’s manual. If towing heavy loads, consider installing a transmission cooler to prevent overheating."
-      },
-      {
-        "type": "p",
-        "text": "6. Warm Up Your Vehicle in Cold Weather"
-      },
-      {
-        "type": "p",
-        "text": "Cold temperatures can thicken transmission fluid, reducing its effectiveness. Allow your vehicle to warm up before driving to ensure proper lubrication and performance, especially in extreme weather conditions."
-      },
-      {
-        "type": "p",
-        "text": "7. Address Problems Early"
-      },
-      {
-        "type": "p",
-        "text": "If you notice signs of transmission or clutch trouble—such as difficulty shifting, slipping gears, or unusual noises—don’t ignore them, bring your car, truck, or SUV to Newby's Automotive Ctr for rapid repairs. Prompt repairs can prevent minor issues from escalating into costly replacements."
-      },
-      {
-        "type": "p",
-        "text": "8. Use the Right Driving Techniques"
-      },
-      {
-        "type": "p",
-        "text": "Avoid habits like engine braking in manual vehicles, as it puts extra strain on the clutch. For automatics, don’t use \"Park\" to hold the car on a hill; rely on the parking brake instead. Proper driving techniques can significantly extend the lifespan of these components."
+        "type": "ol",
+        "items": [
+          {
+            "text": "Regular Maintenance is Key",
+            "body": [
+              {
+                "type": "p",
+                "text": "Schedule routine transmission service, including fluid checks and replacements. Transmission fluid lubricates and cools components, reducing friction and wear. For manual transmissions, ensure the clutch fluid is at optimal levels. Neglecting fluid maintenance can lead to overheating, slipping gears, or complete transmission failure. Allow the technicians at Newby's Automotive Ctr handle your transmission fluid maintenance needs by visiting our website to request service, Newby's Automotive Ctr, or giving us a call."
+              }
+            ]
+          },
+          {
+            "text": "Avoid Riding the Clutch",
+            "body": [
+              {
+                "type": "p",
+                "text": "Manual transmission drivers often fall into the habit of \"riding the clutch,\" keeping the pedal partially engaged while driving. This practice increases friction and heat, leading to premature clutch wear. Instead, fully release the clutch after shifting and use the handbrake on inclines to prevent rollback."
+              }
+            ]
+          },
+          {
+            "text": "Shift Gears Smoothly",
+            "body": [
+              {
+                "type": "p",
+                "text": "Whether driving a manual or automatic vehicle, harsh or rapid gear changes put extra stress on the transmission. In manual cars, practice smooth engagement of the clutch and match engine speed to the desired gear. Automatic drivers should avoid rapid acceleration or unnecessary downshifting."
+              }
+            ]
+          },
+          {
+            "text": "Keep an Eye on Transmission Fluid",
+            "body": [
+              {
+                "type": "p",
+                "text": "Transmission fluid should be clean and at the correct level. Dirty or burnt fluid can indicate internal problems and accelerate wear. Allow the maintenance mechanics at Newby's Automotive Ctr to check your vehicle’s owner manual for recommended intervals for fluid changes. We’ll always use the type specified by the manufacturer."
+              }
+            ]
+          },
+          {
+            "text": "Don’t Overload Your Vehicle",
+            "body": [
+              {
+                "type": "p",
+                "text": "Overloading strains the transmission and clutch, as they must work harder to move the vehicle. Avoid exceeding the maximum weight capacity specified in your owner’s manual. If towing heavy loads, consider installing a transmission cooler to prevent overheating."
+              }
+            ]
+          },
+          {
+            "text": "Warm Up Your Vehicle in Cold Weather",
+            "body": [
+              {
+                "type": "p",
+                "text": "Cold temperatures can thicken transmission fluid, reducing its effectiveness. Allow your vehicle to warm up before driving to ensure proper lubrication and performance, especially in extreme weather conditions."
+              }
+            ]
+          },
+          {
+            "text": "Address Problems Early",
+            "body": [
+              {
+                "type": "p",
+                "text": "If you notice signs of transmission or clutch trouble—such as difficulty shifting, slipping gears, or unusual noises—don’t ignore them, bring your car, truck, or SUV to Newby's Automotive Ctr for rapid repairs. Prompt repairs can prevent minor issues from escalating into costly replacements."
+              }
+            ]
+          },
+          {
+            "text": "Use the Right Driving Techniques",
+            "body": [
+              {
+                "type": "p",
+                "text": "Avoid habits like engine braking in manual vehicles, as it puts extra strain on the clutch. For automatics, don’t use \"Park\" to hold the car on a hill; rely on the parking brake instead. Proper driving techniques can significantly extend the lifespan of these components."
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "h",
@@ -4027,7 +4115,7 @@ export const articles: Article[] = [
     "sourceId": "1102",
     "sourceUrl": "https://www.newbysautomotive.com/blog-details?objId=1102",
     "title": "Unraveling the Mystery Behind Your Vehicle's Check Engine Light",
-    "excerpt": "Every driver dreads the sudden illumination of the check engine light on their dashboard. It's like the car's way of whispering, \"Houston, we have a...",
+    "excerpt": "Every driver dreads the sudden illumination of the check engine light on their dashboard. It's like the car's way of whispering, \"Houston, we have a problem.\"",
     "date": "2025-01-01",
     "readMins": 2,
     "photo": "/photos/blog/unraveling-the-mystery-behind-your-vehicles-check-engine-light.jpg",
@@ -5244,24 +5332,14 @@ export const articles: Article[] = [
         "text": "Many other ways to thoroughly evaluate a prospective vehicle for drivability and dependability is through a visual inspection as well. A visual inspection can eliminate the chance of purchasing a vehicle that is due for maintenance and repairs not long after the transaction is complete. Professionals recommend examining the following components for possible wear and tear:"
       },
       {
-        "type": "p",
-        "text": "• Worn or overused tires"
-      },
-      {
-        "type": "p",
-        "text": "• Jammed windows or poor performing auto electrical buttons."
-      },
-      {
-        "type": "p",
-        "text": "• Body paint damage including, worn paint, rust, scratches, minor dents etc."
-      },
-      {
-        "type": "p",
-        "text": "• Squeaking doors when opened or closed."
-      },
-      {
-        "type": "p",
-        "text": "• Interior wear including, seat damage, worn print on dashboard controls, or a poor performing seat belt."
+        "type": "ul",
+        "items": [
+          "Worn or overused tires",
+          "Jammed windows or poor performing auto electrical buttons.",
+          "Body paint damage including, worn paint, rust, scratches, minor dents etc.",
+          "Squeaking doors when opened or closed.",
+          "Interior wear including, seat damage, worn print on dashboard controls, or a poor performing seat belt."
+        ]
       },
       {
         "type": "h",
@@ -6282,24 +6360,14 @@ export const articles: Article[] = [
         "text": "As long as you pay attention, noticing a pair of bad brakes is not too difficult. If you notice any of the following issues, take your car to a shop ASAP. That way, mechanics can identify the issue. Then, you can fix it."
       },
       {
-        "type": "p",
-        "text": "· The Brake Pedal Is Too Soft"
-      },
-      {
-        "type": "p",
-        "text": "· Pressing the Pedal Is Too Hard"
-      },
-      {
-        "type": "p",
-        "text": "· The Vehicle Shakes or Vibrates When Braking"
-      },
-      {
-        "type": "p",
-        "text": "· The Brake Light Never Turns Off"
-      },
-      {
-        "type": "p",
-        "text": "· Burning Smell"
+        "type": "ul",
+        "items": [
+          "The Brake Pedal Is Too Soft",
+          "Pressing the Pedal Is Too Hard",
+          "The Vehicle Shakes or Vibrates When Braking",
+          "The Brake Light Never Turns Off",
+          "Burning Smell"
+        ]
       },
       {
         "type": "h",
@@ -6447,28 +6515,15 @@ export const articles: Article[] = [
         "text": "Below you will find effective ways to mitigate the factors of transmission failure and achieve optimal results for your vehicle longevity. Every car breaks down eventually, and transmission is usually one of the first things to have issues. When you utilize these tips, it will help to increase the lifespan of your car and reduce the risk of premature transmission failure. Implement these tips and take care of business for increased awareness of the potential issues that many overlook!"
       },
       {
-        "type": "p",
-        "text": "· Drive Safely and smoothly"
-      },
-      {
-        "type": "p",
-        "text": "· Take proper care of your transmission"
-      },
-      {
-        "type": "p",
-        "text": "· Note your transmission fluid"
-      },
-      {
-        "type": "p",
-        "text": "· Shift Properly"
-      },
-      {
-        "type": "p",
-        "text": "· Utilize Common sense"
-      },
-      {
-        "type": "p",
-        "text": "· Let a professional diagnose issues"
+        "type": "ul",
+        "items": [
+          "Drive Safely and smoothly",
+          "Take proper care of your transmission",
+          "Note your transmission fluid",
+          "Shift Properly",
+          "Utilize Common sense",
+          "Let a professional diagnose issues"
+        ]
       }
     ]
   },
@@ -6492,20 +6547,13 @@ export const articles: Article[] = [
         "text": "A sound exhaust channel will also make sure that the engine works in good condition. Like any other part of a vehicle, the exhaust channel will develop issues that may damage the engine. It is therefore crucial that you give your vehicle service to ensure that everything is working in order. Significant parts of the system and what they do include:"
       },
       {
-        "type": "p",
-        "text": "· The Manifold - It collects the gases emitted in the engine combustion chambers and directs them to the exhaust pipe."
-      },
-      {
-        "type": "p",
-        "text": "· The Converter - Using several catalysts, the converter turns the emitted gases into carbon dioxide and vapor."
-      },
-      {
-        "type": "p",
-        "text": "· The Resonator - It enhances the emission of the gases by ensuring a steady flow of the gases in the exhaust pipes."
-      },
-      {
-        "type": "p",
-        "text": "· Tail pipe - The tail pipe draws gases from the converter. It passes under the vehicle's bumper and to the air as carbon dioxide and vapor."
+        "type": "ul",
+        "items": [
+          "The Manifold - It collects the gases emitted in the engine combustion chambers and directs them to the exhaust pipe.",
+          "The Converter - Using several catalysts, the converter turns the emitted gases into carbon dioxide and vapor.",
+          "The Resonator - It enhances the emission of the gases by ensuring a steady flow of the gases in the exhaust pipes.",
+          "Tail pipe - The tail pipe draws gases from the converter. It passes under the vehicle's bumper and to the air as carbon dioxide and vapor."
+        ]
       },
       {
         "type": "h",
@@ -6581,12 +6629,11 @@ export const articles: Article[] = [
         "text": "Many vehicle owners go through the seasons without giving more thought to the stance of their vehicles than when driving in warmer weather when elevated concern is sometimes necessary. It is important to pay attention to your vehicle and be proactive about repair during the winter or colder weather in general because cold weather can affect vehicles differently. Here are auto situations that compromise safety more frequently when it is cold:"
       },
       {
-        "type": "p",
-        "text": "· V ehicle accidents increase, which can translate into collision repair needs."
-      },
-      {
-        "type": "p",
-        "text": "· The cold weather may prompt internal issues with your vehicle, calling for increased general auto repair needs."
+        "type": "ul",
+        "items": [
+          "Vehicle accidents increase, which can translate into collision repair needs.",
+          "The cold weather may prompt internal issues with your vehicle, calling for increased general auto repair needs."
+        ]
       },
       {
         "type": "h",
@@ -6626,7 +6673,7 @@ export const articles: Article[] = [
       },
       {
         "type": "p",
-        "text": "If possible, a driver should also try to avoid travelling long distance if the conditions compromise safety too substantially."
+        "text": "If possible, a driver should also try to avoid traveling long distance if the conditions compromise safety too substantially."
       },
       {
         "type": "h",
@@ -6678,20 +6725,13 @@ export const articles: Article[] = [
         "text": "Some common signs that your vehicle is misaligned are:"
       },
       {
-        "type": "p",
-        "text": "· Vehicle pulls to left or right"
-      },
-      {
-        "type": "p",
-        "text": "· Tires make a squealing sound"
-      },
-      {
-        "type": "p",
-        "text": "· Tire wear is uneven"
-      },
-      {
-        "type": "p",
-        "text": "· Steering wheel isn't aligned with the tires"
+        "type": "ul",
+        "items": [
+          "Vehicle pulls to left or right",
+          "Tires make a squealing sound",
+          "Tire wear is uneven",
+          "Steering wheel isn't aligned with the tires"
+        ]
       },
       {
         "type": "p",
@@ -6747,7 +6787,7 @@ export const articles: Article[] = [
       },
       {
         "type": "p",
-        "text": "Attempting to fix your alignment on your own can be difficult. The process involves removing your tie rods a lot and measuring the proper angle and distance of your wheels. Our team can ensure that your vehicle 's alignment matches its factory-standard setting."
+        "text": "Attempting to fix your alignment on your own can be difficult. The process involves removing your tie rods a lot and measuring the proper angle and distance of your wheels. Our team can ensure that your vehicle’s alignment matches its factory-standard setting."
       },
       {
         "type": "h",
@@ -7018,7 +7058,7 @@ export const articles: Article[] = [
       },
       {
         "type": "p",
-        "text": "Despite the smoke that an overheating vehicle emits, it won’t cause your vehicle to blow up or put you in any danger. Still, an overheating engine can do some serious damage to you and your wallet. As soon as you notice that your vehicle is overheating, pull over immediately. Continuing to drive can worsen whatever the issue may be and could cost you pricey auto repairs in the long run. Additionally, you’ll want to turn off the air conditioner when your vehicle overheats because it puts stress on your engine. Instead, put your heater on to release some of the extra heat from the engine to assist in cooling it down. In turn, your radiator fan and water pump will operate quicker, pushing more air and water through your ’s radiator."
+        "text": "Despite the smoke that an overheating vehicle emits, it won’t cause your vehicle to blow up or put you in any danger. Still, an overheating engine can do some serious damage to you and your wallet. As soon as you notice that your vehicle is overheating, pull over immediately. Continuing to drive can worsen whatever the issue may be and could cost you pricey auto repairs in the long run. Additionally, you’ll want to turn off the air conditioner when your vehicle overheats because it puts stress on your engine. Instead, put your heater on to release some of the extra heat from the engine to assist in cooling it down. In turn, your radiator fan and water pump will operate quicker, pushing more air and water through your radiator."
       },
       {
         "type": "p",
@@ -7058,28 +7098,15 @@ export const articles: Article[] = [
         "text": "Reasons for this include:"
       },
       {
-        "type": "p",
-        "text": "· Fuel system issues"
-      },
-      {
-        "type": "p",
-        "text": "· A failed catalytic converter"
-      },
-      {
-        "type": "p",
-        "text": "· A dirty or damaged Mass Air Flow Sensor (MAF)"
-      },
-      {
-        "type": "p",
-        "text": "· A malfunctioning oxygen sensor"
-      },
-      {
-        "type": "p",
-        "text": "· The timing belt"
-      },
-      {
-        "type": "p",
-        "text": "· A dirty or clogged air filter"
+        "type": "ul",
+        "items": [
+          "Fuel system issues",
+          "A failed catalytic converter",
+          "A dirty or damaged Mass Air Flow Sensor (MAF)",
+          "A malfunctioning oxygen sensor",
+          "The timing belt",
+          "A dirty or clogged air filter"
+        ]
       },
       {
         "type": "h",
@@ -7239,20 +7266,13 @@ export const articles: Article[] = [
         "text": "To prevent fast wear and tear of tires always:"
       },
       {
-        "type": "p",
-        "text": "• Avoid fast starts and stops"
-      },
-      {
-        "type": "p",
-        "text": "• Keep your wheel properly aligned"
-      },
-      {
-        "type": "p",
-        "text": "• Maintain recommended tire pressure"
-      },
-      {
-        "type": "p",
-        "text": "• Visit tire repair shop to have your wheels rotated regularly"
+        "type": "ul",
+        "items": [
+          "Avoid fast starts and stops",
+          "Keep your wheel properly aligned",
+          "Maintain recommended tire pressure",
+          "Visit tire repair shop to have your wheels rotated regularly"
+        ]
       },
       {
         "type": "h",
@@ -7304,19 +7324,19 @@ export const articles: Article[] = [
         "items": [
           "Squealing -often metal-on-metal in nature, possibly exacerbated brakes, pads or rotors",
           "Clicking -from under the bonnet might mean your engine is low on oil, problem with the valve train, or possibly a worn out engine for older vehicles.",
-          "Rattling- indicative of something loose, or that something has lodged itself under the car.",
+          "Rattling – indicative of something loose, or that something has lodged itself under the car.",
           "Popping/Banging- a vacuum or exhaust leak somewhere, a problem with the catalytic converter, or the engine may be out of tune",
-          "Spluttering- it could indicate a problem with the engine’s fuel, ignition, or the exhaust system if noise is coming from front of car.",
-          "Hissing- possible fluid leak touching a hot part of the engine, or a vacuum leak from one of the small hoses around the engine’s air intake.",
-          "Grinding- sound from your car’s gearbox might be a problem with the clutch thrust bearing, or the clutch itself; shafts and gears inside the transmission",
+          "Spluttering – it could indicate a problem with the engine’s fuel, ignition, or the exhaust system if noise is coming from front of car.",
+          "Hissing – possible fluid leak touching a hot part of the engine, or a vacuum leak from one of the small hoses around the engine’s air intake.",
+          "Grinding – sound from your car’s gearbox might be a problem with the clutch thrust bearing, or the clutch itself; shafts and gears inside the transmission",
           "Clanging- Might b e metal part swinging around and hitting other metal parts something might be loose or detached",
-          "Whirring- sounding like a fan after engine is turned off might be the operation of cooling fans, auxiliary pumps or air suspension, but not limited to these",
-          "Knocking- when you accelerate, and can come from an engine that’s poorly tuned, or running on the wrong fuel, low on octane"
+          "Whirring – sounding like a fan after engine is turned off might be the operation of cooling fans, auxiliary pumps or air suspension, but not limited to these",
+          "Knocking – when you accelerate, and can come from an engine that’s poorly tuned, or running on the wrong fuel, low on octane"
         ]
       },
       {
         "type": "p",
-        "text": "These are a few of the potential reasons as to why your car may have begun to make any of these noises under no new circumstances. You rely on your vehicle daily and the importance of secure transportation might often times go unnoticed. If your car does randomly begin to make unusual sounds, the correct thing to do is to begin by either trying to identify the cause or to bring in your vehicle to an auto repair shop for a professional inspection. Rest assured that no matter what the cause may be for this new unwelcomed noise, there is always a reliable and reasonable solution."
+        "text": "These are a few of the potential reasons as to why your car may have begun to make any of these noises under no new circumstances. You rely on your vehicle daily and the importance of secure transportation might often times go unnoticed. If your car does randomly begin to make unusual sounds, the correct thing to do is to begin by either trying to identify the cause or to bring in your vehicle to an auto repair shop for a professional inspection. Rest assured that no matter what the cause may be for this new unwelcome noise, there is always a reliable and reasonable solution."
       }
     ]
   },
@@ -7340,56 +7360,30 @@ export const articles: Article[] = [
         "text": "What do the different lights mean?"
       },
       {
-        "type": "p",
-        "text": "· Consistent Light - If you are seeing a consistent check engine light there is a problem with your engine. It is nothing that needs to be attended to with your next paycheck but it is something that is needs to be attended to if you plans to have your car for a longer period. Most of the time when the check engine light comes on it can be fixed at home and is just to signal a loose gas cap. However, if this does not solve the problem we strongly advise you to get the car looked at by a professional mechanic for an inspection."
-      },
-      {
-        "type": "p",
-        "text": "· Flashing light - If you are seeing a flashing light on the other hand, this means that you need to pull over immediately as your vehicle has a serious issue (most commonly the engine is misfiring) that could cause severe engine damage. These problems are usually more complicated and therefore it is essential to get your vehicle in the hands of a professional immediately. Do not attempt to drive once this flashing light comes on."
+        "type": "ul",
+        "items": [
+          "Consistent Light - If you are seeing a consistent check engine light there is a problem with your engine. It is nothing that needs to be attended to with your next paycheck but it is something that is needs to be attended to if you plans to have your car for a longer period. Most of the time when the check engine light comes on it can be fixed at home and is just to signal a loose gas cap. However, if this does not solve the problem we strongly advise you to get the car looked at by a professional mechanic for an inspection.",
+          "Flashing light - If you are seeing a flashing light on the other hand, this means that you need to pull over immediately as your vehicle has a serious issue (most commonly the engine is misfiring) that could cause severe engine damage. These problems are usually more complicated and therefore it is essential to get your vehicle in the hands of a professional immediately. Do not attempt to drive once this flashing light comes on."
+        ]
       },
       {
         "type": "h",
         "text": "The 5 Most Common Check Engine Light Reasons"
       },
       {
-        "type": "p",
-        "text": "· The oxygen sensors needs a replacement"
-      },
-      {
-        "type": "p",
-        "text": "· The oxygen sensor measures oxygen in the exhaust to inject the proper amount of fuel to the engine. If there is a problem here, it could cause your vehicle to lose up to 40% off its mpg."
-      },
-      {
-        "type": "p",
-        "text": "· The Gas cap is loose or damaged"
-      },
-      {
-        "type": "p",
-        "text": "· Your gas cap covers the gas tank. It also works to prevent harmful chemicals getting into the environment."
-      },
-      {
-        "type": "p",
-        "text": "· The catalytic converter is damaged"
-      },
-      {
-        "type": "p",
-        "text": "· The catalytic converter protects our environment by converting harmful carbon monoxide into carbon dioxide. Problems arise here due to lack of maintenance."
-      },
-      {
-        "type": "p",
-        "text": "· Issue With The Mass Airflow Sensor"
-      },
-      {
-        "type": "p",
-        "text": "· This sensor measures the amount of air entering the engine to determine how to run your engine efficiently."
-      },
-      {
-        "type": "p",
-        "text": "· Spark plugs and wires gone bad"
-      },
-      {
-        "type": "p",
-        "text": "· The spark plugs on a vehicle work to ignite the gas in the combustion chamber of your vehicle while the spark plug wires deliver the spark from the ignition coil to the spark plugs."
+        "type": "ul",
+        "items": [
+          "The oxygen sensors needs a replacement",
+          "The oxygen sensor measures oxygen in the exhaust to inject the proper amount of fuel to the engine. If there is a problem here, it could cause your vehicle to lose up to 40% off its mpg.",
+          "The Gas cap is loose or damaged",
+          "Your gas cap covers the gas tank. It also works to prevent harmful chemicals getting into the environment.",
+          "The catalytic converter is damaged",
+          "The catalytic converter protects our environment by converting harmful carbon monoxide into carbon dioxide. Problems arise here due to lack of maintenance.",
+          "Issue With The Mass Airflow Sensor",
+          "This sensor measures the amount of air entering the engine to determine how to run your engine efficiently.",
+          "Spark plugs and wires gone bad",
+          "The spark plugs on a vehicle work to ignite the gas in the combustion chamber of your vehicle while the spark plug wires deliver the spark from the ignition coil to the spark plugs."
+        ]
       },
       {
         "type": "h",
@@ -7433,32 +7427,16 @@ export const articles: Article[] = [
         "text": "Signs of Suspension System Failure"
       },
       {
-        "type": "p",
-        "text": "· Drifting or pulling during turns"
-      },
-      {
-        "type": "p",
-        "text": "· Dipping when coming to a stop"
-      },
-      {
-        "type": "p",
-        "text": "· Uneven tire treads"
-      },
-      {
-        "type": "p",
-        "text": "· Swaying"
-      },
-      {
-        "type": "p",
-        "text": "· Bouncing"
-      },
-      {
-        "type": "p",
-        "text": "· Difficulty steering"
-      },
-      {
-        "type": "p",
-        "text": "· Feeling every bump in the road"
+        "type": "ul",
+        "items": [
+          "Drifting or pulling during turns",
+          "Dipping when coming to a stop",
+          "Uneven tire treads",
+          "Swaying",
+          "Bouncing",
+          "Difficulty steering",
+          "Feeling every bump in the road"
+        ]
       },
       {
         "type": "h",
@@ -7575,20 +7553,13 @@ export const articles: Article[] = [
         "text": "Before trying to replace your power steering pump, you first have to find out if it needs replacement in the first place. There are several ways to find out if you have a bad or failing power steering pump, but here are some of the main reasons."
       },
       {
-        "type": "p",
-        "text": "· Whining noise while turning steering wheel"
-      },
-      {
-        "type": "p",
-        "text": "· Steering wheel is stiff or slow to respond"
-      },
-      {
-        "type": "p",
-        "text": "· Squealing noise during vehicle start"
-      },
-      {
-        "type": "p",
-        "text": "· Groaning noises"
+        "type": "ul",
+        "items": [
+          "Whining noise while turning steering wheel",
+          "Steering wheel is stiff or slow to respond",
+          "Squealing noise during vehicle start",
+          "Groaning noises"
+        ]
       },
       {
         "type": "p",
@@ -7663,7 +7634,7 @@ export const articles: Article[] = [
         "text": "Grab your brand-new power steering pump and start your installation. Setting aside your bolts and properly makes this process go smoother and quicker. Once in place, make sure to test the sturdiness of the pump and to make sure there is little to no mobility."
       },
       {
-        "type": "p",
+        "type": "h",
         "text": "8. Reconnect the Feed and Return Lines"
       },
       {
@@ -7728,16 +7699,12 @@ export const articles: Article[] = [
         "text": "Car accidents are a huge problem for people regardless of their ages. They are a particularly big concern for senior citizens, though. That is because people who are elderly often are not as alert as they were in the past. They may have reaction times that can negatively affect safety behind the wheel. If you are a senior who wants to promote the highest degree of safety while driving, then you should do your best to dodge:"
       },
       {
-        "type": "p",
-        "text": "· Distractions of any kind"
-      },
-      {
-        "type": "p",
-        "text": "· Inclement weather"
-      },
-      {
-        "type": "p",
-        "text": "· Excessive darkness"
+        "type": "ul",
+        "items": [
+          "Distractions of any kind",
+          "Inclement weather",
+          "Excessive darkness"
+        ]
       },
       {
         "type": "p",
@@ -7919,14 +7886,14 @@ export const articles: Article[] = [
         "text": "We spend so much time in our vehicles, it is no wonder they can harbor germs and that we must be vigilant in cleaning high touch points. While vehicle sanitization has always been a good idea, it has become an essential practice due to the COVID-19 pandemic. There is a lot that vehicle repair shops and vehicle owners can do together as a community to prevent the spread of germs. Vehicles often have many different surfaces in their interior and you should consider them all when sanitizing for the safety of your family and loved ones. Going the extra mile now and in the future will ensure you have done all you can to protect from germs."
       },
       {
-        "type": "p",
-        "text": "<H2>Vehicle Owner Tips for Sanitizing all Prominent Touch Points</H2>"
+        "type": "h",
+        "text": "Vehicle Owner Tips for Sanitizing all Prominent Touch Points"
       },
       {
         "type": "ul",
         "items": [
           "Sanitize most-touched spots in the interior of the vehicle",
-          "Be sure to sanitize the radio, cupholders, glove box and seatbelts- all highly touched surfaces!",
+          "Be sure to sanitize the radio, cupholders, glove box and seatbelts – all highly touched surfaces!",
           "Don’t forget your dashboard, sun visors and all buttons",
           "Take a close look to find what spots look the dirtiest or that have debris",
           "Wring out your rag completely before sanitizing to avoid moisture buildup",
@@ -7936,11 +7903,11 @@ export const articles: Article[] = [
       },
       {
         "type": "p",
-        "text": "As you make your way through the cockpit, meticulously cleaning, be sure and consider your arm rest and center console. Before moving down the rear, be sure and give the door panels a good cleaning as well. The foundation of cleaning has always been the adequate use of soap and water. This practice is good throughout the year but is imperative now that we are in a pandemic. Many of us clean the steering wheel, dirty door handle, interior carpet and windshield- but we must also consider all locations listed above and get down to the nitty gritty. This will not take much more time than you already took cleaning your vehicle before."
+        "text": "As you make your way through the cockpit, meticulously cleaning, be sure and consider your arm rest and center console. Before moving down the rear, be sure and give the door panels a good cleaning as well. The foundation of cleaning has always been the adequate use of soap and water. This practice is good throughout the year but is imperative now that we are in a pandemic. Many of us clean the steering wheel, dirty door handle, interior carpet and windshield – but we must also consider all locations listed above and get down to the nitty gritty. This will not take much more time than you already took cleaning your vehicle before."
       },
       {
-        "type": "p",
-        "text": "<H2>Choose a Vehicle Repair Shop that Takes Sanitization Seriously</H2>"
+        "type": "h",
+        "text": "Choose a Vehicle Repair Shop that Takes Sanitization Seriously"
       },
       {
         "type": "p",
@@ -8019,16 +7986,12 @@ export const articles: Article[] = [
         "text": "If you own a home or an air conditioner, there is a strong chance you have had to deal with an air filter replacement. These filters function by extracting harmful debris and contaminants from our environments, substances that would otherwise reduce air quality and airflow. When it comes to auto repair, three filters actively sift impurities:"
       },
       {
-        "type": "p",
-        "text": "· Fuel Filters acts as a debris screen in the fuel line, ensuring your fuel is free of contaminants."
-      },
-      {
-        "type": "p",
-        "text": "· Cabin Air Filters prevent harmful particles like smoke, smog, and pollen from entering the passenger cabin."
-      },
-      {
-        "type": "p",
-        "text": "· Lastly, there are Engine Air Filters, which protect your engine cylinders from dirt and debris."
+        "type": "ul",
+        "items": [
+          "Fuel Filters acts as a debris screen in the fuel line, ensuring your fuel is free of contaminants.",
+          "Cabin Air Filters prevent harmful particles like smoke, smog, and pollen from entering the passenger cabin.",
+          "Lastly, there are Engine Air Filters, which protect your engine cylinders from dirt and debris."
+        ]
       },
       {
         "type": "h",
@@ -8096,20 +8059,13 @@ export const articles: Article[] = [
         "text": "Perhaps the biggest advantage that you will experience when you use a windshield cover is that it will cut down on usual repairs that you take your car in to for normally. Most car owners visit an auto repair shop for the following services:"
       },
       {
-        "type": "p",
-        "text": "· Windshield repair"
-      },
-      {
-        "type": "p",
-        "text": "· Tire change"
-      },
-      {
-        "type": "p",
-        "text": "· Oil change"
-      },
-      {
-        "type": "p",
-        "text": "· Rear or front end collisions"
+        "type": "ul",
+        "items": [
+          "Windshield repair",
+          "Tire change",
+          "Oil change",
+          "Rear or front end collisions"
+        ]
       },
       {
         "type": "p",
@@ -8136,20 +8092,13 @@ export const articles: Article[] = [
         "text": "The seasons also play a role in the health of your windshield. When you use a cover, you are protecting it from the following damages brought on through the seasons."
       },
       {
-        "type": "p",
-        "text": "· Fall - During the Fall, your car is subjected to a series of impacts. Sticks will be falling with leaves and possibly striking your car. Turbulent storms may even cause hail to fall and piece your windshield. A cover can keep it safe."
-      },
-      {
-        "type": "p",
-        "text": "· Winter -The season of winter can be a serious problem for the health of your car. Salt on the road can be easily picked up by cars in front of you and flung backward. When it strikes your windshield, it may only make a small chip or crack. However, the ice and cold will quickly extend that crack further."
-      },
-      {
-        "type": "p",
-        "text": "· Spring- Just like the fall season, spring also brings inclement and violent weather. Foliage, hail, and other elements can be brought against your car with strong winds. The cover can help preserve it from impact damage."
-      },
-      {
-        "type": "p",
-        "text": "· Summer - Along with the occasional storm, you will also have to keep your windshield safe from bird droppings. A cover will limit the number of times you visit a car wash."
+        "type": "ul",
+        "items": [
+          "Fall - During the Fall, your car is subjected to a series of impacts. Sticks will be falling with leaves and possibly striking your car. Turbulent storms may even cause hail to fall and piece your windshield. A cover can keep it safe.",
+          "Winter -The season of winter can be a serious problem for the health of your car. Salt on the road can be easily picked up by cars in front of you and flung backward. When it strikes your windshield, it may only make a small chip or crack. However, the ice and cold will quickly extend that crack further.",
+          "Spring- Just like the fall season, spring also brings inclement and violent weather. Foliage, hail, and other elements can be brought against your car with strong winds. The cover can help preserve it from impact damage.",
+          "Summer - Along with the occasional storm, you will also have to keep your windshield safe from bird droppings. A cover will limit the number of times you visit a car wash."
+        ]
       },
       {
         "type": "h",
@@ -8417,7 +8366,7 @@ export const articles: Article[] = [
     "body": [
       {
         "type": "p",
-        "text": "Drive axles are axles on engine powered vehicles that transfer energy from the engine and torque from the transmission on to the front, rear or all the wheels. Drive axles respond to the input they receive from the steering wheel to determine how power will be distributed to the wheels. Drive axels run from the differential into the wheels and are an essential for any automobile to be able it to move. Several other systems interface and interconnect with drive axles to power them and control their movement"
+        "text": "Drive axles are axles on engine powered vehicles that transfer energy from the engine and torque from the transmission on to the front, rear or all the wheels. Drive axles respond to the input they receive from the steering wheel to determine how power will be distributed to the wheels. Drive axles run from the differential into the wheels and are an essential for any automobile to be able it to move. Several other systems interface and interconnect with drive axles to power them and control their movement"
       },
       {
         "type": "h",
@@ -8428,28 +8377,15 @@ export const articles: Article[] = [
         "text": "To many, drive axles seem like a simple, solid object. In actuality, it's a complex piece of equipment that's made up of two half axles connected to the differential and universal joints. Drive axles have several important parts. Those parts include:"
       },
       {
-        "type": "p",
-        "text": "· Axle"
-      },
-      {
-        "type": "p",
-        "text": "· Constant Velocity (CV) Joints"
-      },
-      {
-        "type": "p",
-        "text": "· Drive Shaft"
-      },
-      {
-        "type": "p",
-        "text": "· Differential"
-      },
-      {
-        "type": "p",
-        "text": "· Universal Joint"
-      },
-      {
-        "type": "p",
-        "text": "· Axle Housing"
+        "type": "ul",
+        "items": [
+          "Axle",
+          "Constant Velocity (CV) Joints",
+          "Drive Shaft",
+          "Differential",
+          "Universal Joint",
+          "Axle Housing"
+        ]
       },
       {
         "type": "h",
@@ -8709,16 +8645,12 @@ export const articles: Article[] = [
         "text": "There are a variety of different reasons why it might hard to turn your wheel. There are steps to take to figure out what the problem might be, including the following:"
       },
       {
-        "type": "p",
-        "text": "· Check the fluid levels"
-      },
-      {
-        "type": "p",
-        "text": "· Pay attention to when the steering is the hardest; this could indicate the cause of the problem (i.e., low tire pressure, low fluid levels, etc.)"
-      },
-      {
-        "type": "p",
-        "text": "· Take the vehicle into a professional"
+        "type": "ul",
+        "items": [
+          "Check the fluid levels",
+          "Pay attention to when the steering is the hardest; this could indicate the cause of the problem (i.e., low tire pressure, low fluid levels, etc.)",
+          "Take the vehicle into a professional"
+        ]
       },
       {
         "type": "p",
@@ -8750,32 +8682,16 @@ export const articles: Article[] = [
         "text": "Your vehicle's exhaust system consists of several important interconnected parts. All of them most work properly for the automobile to deliver optimal performance and reduce air pollution. Some key components of the emissions and exhaust systems of an automobile are:"
       },
       {
-        "type": "p",
-        "text": "· Exhaust Manifold"
-      },
-      {
-        "type": "p",
-        "text": "· Catalytic Converter"
-      },
-      {
-        "type": "p",
-        "text": "· Oxygen Sensor"
-      },
-      {
-        "type": "p",
-        "text": "· EGR Valve"
-      },
-      {
-        "type": "p",
-        "text": "· Muffler"
-      },
-      {
-        "type": "p",
-        "text": "· Flanges"
-      },
-      {
-        "type": "p",
-        "text": "· Gaskets"
+        "type": "ul",
+        "items": [
+          "Exhaust Manifold",
+          "Catalytic Converter",
+          "Oxygen Sensor",
+          "EGR Valve",
+          "Muffler",
+          "Flanges",
+          "Gaskets"
+        ]
       },
       {
         "type": "p",
@@ -8838,28 +8754,36 @@ export const articles: Article[] = [
         "text": "There are a number of problems that can develop in the emission system that can impact your vehicle's function and cause the check-engine light to come on. Three of the most common ones are:"
       },
       {
-        "type": "p",
-        "text": "1. A Faulty Purge Solenoid (Vent Valve)"
-      },
-      {
-        "type": "p",
-        "text": "This valve can become stuck open or closed because of too much or too little flow or a leak in the system."
-      },
-      {
-        "type": "p",
-        "text": "2. EGR Valve Issues"
-      },
-      {
-        "type": "p",
-        "text": "The Exhaust Gas Recirculation (EGR) system reduces the amount of 'bad' air that passes through the catalytic converter. The EGR valve controls the amount of spent gas that flows back through the intake system. The EGR valve can sometimes get stuck in the open or closed position and lead to stalling or rough idling of the vehicle."
-      },
-      {
-        "type": "p",
-        "text": "3. Excessive Carbon Buildup"
-      },
-      {
-        "type": "p",
-        "text": "Excessive amounts of carbon can build up in the passages from the exhaust manifold through which the exhaust gasses pass. Those passages must be thoroughly cleaned periodically to keep the system functioning properly."
+        "type": "ol",
+        "items": [
+          {
+            "text": "A Faulty Purge Solenoid (Vent Valve)",
+            "body": [
+              {
+                "type": "p",
+                "text": "This valve can become stuck open or closed because of too much or too little flow or a leak in the system."
+              }
+            ]
+          },
+          {
+            "text": "EGR Valve Issues",
+            "body": [
+              {
+                "type": "p",
+                "text": "The Exhaust Gas Recirculation (EGR) system reduces the amount of 'bad' air that passes through the catalytic converter. The EGR valve controls the amount of spent gas that flows back through the intake system. The EGR valve can sometimes get stuck in the open or closed position and lead to stalling or rough idling of the vehicle."
+              }
+            ]
+          },
+          {
+            "text": "Excessive Carbon Buildup",
+            "body": [
+              {
+                "type": "p",
+                "text": "Excessive amounts of carbon can build up in the passages from the exhaust manifold through which the exhaust gasses pass. Those passages must be thoroughly cleaned periodically to keep the system functioning properly."
+              }
+            ]
+          }
+        ]
       },
       {
         "type": "h",
@@ -8967,32 +8891,16 @@ export const articles: Article[] = [
         "text": "You can prevent damage to your car transfer case by using the following tips:"
       },
       {
-        "type": "p",
-        "text": "· Take the car out of four-wheel drive whenever you can. There is no need to drive with four wheels if conditions are perfect. If you have all-wheel drive, you need to make sure that you do not use the programmed traction control settings unless you absolutely need them"
-      },
-      {
-        "type": "p",
-        "text": "· Ask your mechanic to check the transfer box even when they are doing an oil change. You could repair tiny problems with the transfer case before they get out of hand."
-      },
-      {
-        "type": "p",
-        "text": "· Go in for the milestone services that are prescribed in the owner’s manual"
-      },
-      {
-        "type": "p",
-        "text": "· Try to shift gears as gently as possible"
-      },
-      {
-        "type": "p",
-        "text": "· If you have an automatic transmission, you need to make sure that you do not use too much power on the highway"
-      },
-      {
-        "type": "p",
-        "text": "· You should try to keep off-road driving to minimum"
-      },
-      {
-        "type": "p",
-        "text": "· If you are driving off-road often, you need to have the transfer box checked more often than not"
+        "type": "ul",
+        "items": [
+          "Take the car out of four-wheel drive whenever you can. There is no need to drive with four wheels if conditions are perfect. If you have all-wheel drive, you need to make sure that you do not use the programmed traction control settings unless you absolutely need them",
+          "Ask your mechanic to check the transfer box even when they are doing an oil change. You could repair tiny problems with the transfer case before they get out of hand.",
+          "Go in for the milestone services that are prescribed in the owner’s manual",
+          "Try to shift gears as gently as possible",
+          "If you have an automatic transmission, you need to make sure that you do not use too much power on the highway",
+          "You should try to keep off-road driving to minimum",
+          "If you are driving off-road often, you need to have the transfer box checked more often than not"
+        ]
       },
       {
         "type": "p",
@@ -9361,7 +9269,7 @@ export const articles: Article[] = [
       },
       {
         "type": "p",
-        "text": "Maintaining small transmission issues is the best way to preserve your dollar and the life of your transmission. If put off, they may escalate and cause new issues. A transmission with several issues can cause further damage to other components of your car and make in undriveable. It may also be risky to invest in repairing a large amount of damages because if it does not work out not only will you have lost money but will have to opt for replacement which will be a further investment. Because replacement is costly and the transmission is one of the most essential components in a vehicle, maintenance by a professional auto technician is the key in preserving your vehicle."
+        "text": "Maintaining small transmission issues is the best way to preserve your dollar and the life of your transmission. If put off, they may escalate and cause new issues. A transmission with several issues can cause further damage to other components of your car and make it undrivable. It may also be risky to invest in repairing a large amount of damages because if it does not work out not only will you have lost money but will have to opt for replacement which will be a further investment. Because replacement is costly and the transmission is one of the most essential components in a vehicle, maintenance by a professional auto technician is the key in preserving your vehicle."
       }
     ]
   },
@@ -9465,42 +9373,26 @@ export const articles: Article[] = [
       {
         "type": "ul",
         "items": [
-          "Check to see if the problem is high-priority"
+          "Check to see if the problem is high-priority If so, do not continue driving and hope that everything is going to be okay. Park your car on the side of the road and turn off your vehicle."
         ]
-      },
-      {
-        "type": "p",
-        "text": "- If so, do not continue driving and hope that everything is going to be okay. Park your car on the side of the road and turn off your vehicle."
       },
       {
         "type": "ul",
         "items": [
-          "Take the stress off your engine"
+          "Take the stress off your engine If you’re putting your vehicle under major stress by driving too fast or carrying more weight than your vehicle can handle, it’s likely that your engine is trying to over-compensate which is causing the light to go off."
         ]
-      },
-      {
-        "type": "p",
-        "text": "- If you’re putting your vehicle under major stress by driving too fast or carrying more weight than your vehicle can handle, it’s likely that your engine is trying to over-compensate which is causing the light to go off."
       },
       {
         "type": "ul",
         "items": [
-          "Make sure your gas can is tightened"
+          "Make sure your gas can is tightened Some check engine light goes off simply because the gas cap is loose."
         ]
-      },
-      {
-        "type": "p",
-        "text": "- Some check engine light goes off simply because the gas cap is loose."
       },
       {
         "type": "ul",
         "items": [
-          "Get your vehicle diagnosed"
+          "Get your vehicle diagnosed If you aren’t certain on what’s causing your vehicle’s check engine light to come on, it’s better to be safe than sorry and take it in to a certified mechanic. Some of the newer makes have the ability to self-diagnose themselves to let you know what needs to be serviced."
         ]
-      },
-      {
-        "type": "p",
-        "text": "- If you aren’t certain on what’s causing your vehicle’s check engine light to come on, it’s better to be safe than sorry and take it in to a certified mechanic. Some of the newer makes have the ability to self-diagnose themselves to let you know what needs to be serviced."
       },
       {
         "type": "h",
@@ -9759,7 +9651,7 @@ export const articles: Article[] = [
     "sourceId": "1869",
     "sourceUrl": "https://www.newbysautomotive.com/blog-details?objId=1869",
     "title": "An Operative Water Pump Maintains your Engine Temperature",
-    "excerpt": "A car cannot safely operate without a water pump. A water pump maintains the necessary car temperature for a car to be functionable through a series of...",
+    "excerpt": "A car cannot safely operate without a water pump. A water pump maintains the necessary car temperature for a car to be functional through a series of...",
     "date": "2021-11-15",
     "readMins": 2,
     "photo": "/photos/blog/water-pump-replacements-signs-function-and-performance-risk.jpg",
@@ -9767,7 +9659,7 @@ export const articles: Article[] = [
     "body": [
       {
         "type": "p",
-        "text": "A car cannot safely operate without a water pump. A water pump maintains the necessary car temperature for a car to be functionable through a series of operations."
+        "text": "A car cannot safely operate without a water pump. A water pump maintains the necessary car temperature for a car to be functional through a series of operations."
       },
       {
         "type": "h",
@@ -9775,7 +9667,7 @@ export const articles: Article[] = [
       },
       {
         "type": "p",
-        "text": "A water pump uses an impeller blade, also referred to as a rotor, which is the part of the pump that rotates to push the water out from the center of rotation. It moves through the engine block, which is the metal structure containing the cylinder, oil passages, cooling jacket, and crankcase which altogether transfers heat from friction to the atmosphere and engine coolant, then through the hoses and radiator, maintaining the proper temperature. For your car to submit to high temperature conditions and run smoothly and cooly, a vehicle’s engine needs coolant to flow through the radiator and engine. The water pump perpetuates that rotation to consitently maintain an operatative temperature. When there is an issue with the water pump, the temperature will not be maintained and your car can overheat."
+        "text": "A water pump uses an impeller blade, also referred to as a rotor, which is the part of the pump that rotates to push the water out from the center of rotation. It moves through the engine block, which is the metal structure containing the cylinder, oil passages, cooling jacket, and crankcase which altogether transfers heat from friction to the atmosphere and engine coolant, then through the hoses and radiator, maintaining the proper temperature. For your car to submit to high temperature conditions and run smoothly and coolly, a vehicle’s engine needs coolant to flow through the radiator and engine. The water pump perpetuates that rotation to consistently maintain an operative temperature. When there is an issue with the water pump, the temperature will not be maintained and your car can overheat."
       },
       {
         "type": "h",
@@ -9907,16 +9799,12 @@ export const articles: Article[] = [
         "text": "You may need to visit an auto technician if your alternator becomes thoroughly wet. However, in most cases, your alternator should be just fine. It is built to handle things like:"
       },
       {
-        "type": "p",
-        "text": "· Puddles"
-      },
-      {
-        "type": "p",
-        "text": "· Rain"
-      },
-      {
-        "type": "p",
-        "text": "· Engine washing"
+        "type": "ul",
+        "items": [
+          "Puddles",
+          "Rain",
+          "Engine washing"
+        ]
       },
       {
         "type": "h",
@@ -9967,16 +9855,12 @@ export const articles: Article[] = [
         "text": "While it is safe to clean your alternator when you are cleaning your engine, you should be careful how you do it. An auto repair shop can do it properly. Otherwise, you just need a rag and some dish soap."
       },
       {
-        "type": "p",
-        "text": "· Cleaning around the alternator and try not to let the water drip inside of it."
-      },
-      {
-        "type": "p",
-        "text": "· You do not want to use a power washer to clean the alternator."
-      },
-      {
-        "type": "p",
-        "text": "· Then let the hood stand open to dry the alternator thoroughly."
+        "type": "ul",
+        "items": [
+          "Cleaning around the alternator and try not to let the water drip inside of it.",
+          "You do not want to use a power washer to clean the alternator.",
+          "Then let the hood stand open to dry the alternator thoroughly."
+        ]
       },
       {
         "type": "h",
@@ -10081,20 +9965,13 @@ export const articles: Article[] = [
         "text": "There are a few main causes behind an oil leak. Some of the main culprits include:"
       },
       {
-        "type": "p",
-        "text": "· Worn out oil filter"
-      },
-      {
-        "type": "p",
-        "text": "· Worn out oil drain plug"
-      },
-      {
-        "type": "p",
-        "text": "· Broken filler cap"
-      },
-      {
-        "type": "p",
-        "text": "· Valve gasket damage"
+        "type": "ul",
+        "items": [
+          "Worn out oil filter",
+          "Worn out oil drain plug",
+          "Broken filler cap",
+          "Valve gasket damage"
+        ]
       },
       {
         "type": "h",
@@ -10526,24 +10403,14 @@ export const articles: Article[] = [
         "text": "There are five main types of spark plugs:"
       },
       {
-        "type": "p",
-        "text": "• Silver"
-      },
-      {
-        "type": "p",
-        "text": "• Double platinum"
-      },
-      {
-        "type": "p",
-        "text": "• Copper"
-      },
-      {
-        "type": "p",
-        "text": "• Single platinum"
-      },
-      {
-        "type": "p",
-        "text": "• Iridium"
+        "type": "ul",
+        "items": [
+          "Silver",
+          "Double platinum",
+          "Copper",
+          "Single platinum",
+          "Iridium"
+        ]
       },
       {
         "type": "h",
@@ -10703,24 +10570,14 @@ export const articles: Article[] = [
         "text": "Mostly, these are issues to do with your vehicle needing professional repair. The moment you realize a change in your vehicle’s drivability, have it checked. Some of the things to check out to ensure a smooth drive is not compromised include:"
       },
       {
-        "type": "p",
-        "text": "• Oil replacement"
-      },
-      {
-        "type": "p",
-        "text": "• Checking the engine"
-      },
-      {
-        "type": "p",
-        "text": "• The alternators"
-      },
-      {
-        "type": "p",
-        "text": "• Tire alignment"
-      },
-      {
-        "type": "p",
-        "text": "• Braking mechanism"
+        "type": "ul",
+        "items": [
+          "Oil replacement",
+          "Checking the engine",
+          "The alternators",
+          "Tire alignment",
+          "Braking mechanism"
+        ]
       },
       {
         "type": "h",
@@ -10881,28 +10738,15 @@ export const articles: Article[] = [
         "text": "Important points to remember:"
       },
       {
-        "type": "p",
-        "text": "· Change the transmission fluid regularly on average every 50,000 miles or so"
-      },
-      {
-        "type": "p",
-        "text": "· On high mileage vehicles with dirty transmission fluid do not change for clean fluid"
-      },
-      {
-        "type": "p",
-        "text": "· Preventative maintenance is key"
-      },
-      {
-        "type": "p",
-        "text": "· Changing dirty fluid for clean fluid can cause the converter to begin slipping"
-      },
-      {
-        "type": "p",
-        "text": "· Dirty fluid has more friction and transmission running on dirty fluid will slip if transferred to clean fluid"
-      },
-      {
-        "type": "p",
-        "text": "· Even if there is a lifetime fluid guarantee expert recommend still maintaining your transmission fluid clean with maintenance"
+        "type": "ul",
+        "items": [
+          "Change the transmission fluid regularly on average every 50,000 miles or so",
+          "On high mileage vehicles with dirty transmission fluid do not change for clean fluid",
+          "Preventative maintenance is key",
+          "Changing dirty fluid for clean fluid can cause the converter to begin slipping",
+          "Dirty fluid has more friction and transmission running on dirty fluid will slip if transferred to clean fluid",
+          "Even if there is a lifetime fluid guarantee expert recommend still maintaining your transmission fluid clean with maintenance"
+        ]
       },
       {
         "type": "p",
@@ -11137,16 +10981,12 @@ export const articles: Article[] = [
         "text": "How to maintain an alternator"
       },
       {
-        "type": "p",
-        "text": "• Check for fluid leaks"
-      },
-      {
-        "type": "p",
-        "text": "• Look out for signs of a faulty battery"
-      },
-      {
-        "type": "p",
-        "text": "• Avoid high-tech add-ons to your vehicle"
+        "type": "ul",
+        "items": [
+          "Check for fluid leaks",
+          "Look out for signs of a faulty battery",
+          "Avoid high-tech add-ons to your vehicle"
+        ]
       },
       {
         "type": "h",
@@ -11161,24 +11001,14 @@ export const articles: Article[] = [
         "text": "Why do starters fail?"
       },
       {
-        "type": "p",
-        "text": "• Loose wiring"
-      },
-      {
-        "type": "p",
-        "text": "• Battery corrosion"
-      },
-      {
-        "type": "p",
-        "text": "• Oil leaks"
-      },
-      {
-        "type": "p",
-        "text": "• Dirty connections"
-      },
-      {
-        "type": "p",
-        "text": "• Worn-out or damaged parts in the system"
+        "type": "ul",
+        "items": [
+          "Loose wiring",
+          "Battery corrosion",
+          "Oil leaks",
+          "Dirty connections",
+          "Worn-out or damaged parts in the system"
+        ]
       },
       {
         "type": "h",
@@ -11266,24 +11096,14 @@ export const articles: Article[] = [
         "text": "Other Signs to Look for"
       },
       {
-        "type": "p",
-        "text": "• Liquid overflow"
-      },
-      {
-        "type": "p",
-        "text": "• Pump rust"
-      },
-      {
-        "type": "p",
-        "text": "• Abnormal temperature gauge"
-      },
-      {
-        "type": "p",
-        "text": "• Holes on the dry side of the water pump"
-      },
-      {
-        "type": "p",
-        "text": "• Reduced heat or lack of heat"
+        "type": "ul",
+        "items": [
+          "Liquid overflow",
+          "Pump rust",
+          "Abnormal temperature gauge",
+          "Holes on the dry side of the water pump",
+          "Reduced heat or lack of heat"
+        ]
       },
       {
         "type": "h",
@@ -11322,24 +11142,14 @@ export const articles: Article[] = [
         "text": "Other Causes"
       },
       {
-        "type": "p",
-        "text": "· Blown gaskets"
-      },
-      {
-        "type": "p",
-        "text": "· Flushing the coolant on time"
-      },
-      {
-        "type": "p",
-        "text": "· Wear and tear"
-      },
-      {
-        "type": "p",
-        "text": "· Improper installed belt"
-      },
-      {
-        "type": "p",
-        "text": "· Things to Note When Replacing a Water Pump"
+        "type": "ul",
+        "items": [
+          "Blown gaskets",
+          "Flushing the coolant on time",
+          "Wear and tear",
+          "Improper installed belt",
+          "Things to Note When Replacing a Water Pump"
+        ]
       },
       {
         "type": "h",
