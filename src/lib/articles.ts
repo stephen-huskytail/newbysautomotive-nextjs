@@ -29,6 +29,75 @@ export type Article = {
 
 export const articles: Article[] = [
 {
+  "slug": "car-ac-not-blowing-cold-air",
+  "title": "Car A/C Not Blowing Cold Air? Causes to Check and When to Call",
+  "excerpt": "Warm air, weak airflow, noise or odor can point to different parts of a car's A/C. See what to check, what a recharge does and what to tell the shop.",
+  "date": "2026-11-01",
+  "readMins": 7,
+  "photo": "/photos/blog/car-ac-not-blowing-cold-air.webp",
+  "photoAlt": "Hand held near a car dashboard air vent to feel the airflow",
+  "body": [
+    {
+      "type": "h",
+      "text": "What does the way your A/C fails tell you?"
+    },
+    {
+      "type": "h",
+      "text": "What can cause warm air?"
+    },
+    {
+      "type": "h",
+      "text": "What if the air is cool but weak?"
+    },
+    {
+      "type": "h",
+      "text": "Does a recharge fix it?"
+    },
+    {
+      "type": "h",
+      "text": "Why not add refrigerant yourself?"
+    },
+    {
+      "type": "h",
+      "text": "What should you tell the shop?"
+    },
+    {
+      "type": "h",
+      "text": "Frequently asked questions"
+    },
+    {
+      "type": "h",
+      "text": "Get your A/C checked in Henderson"
+    },
+    {
+      "type": "h",
+      "text": "Sources"
+    }
+  ],
+  "html": "<p>By the Newby's Automotive Center team. Published: November 1, 2026.</p>\n<p>When a car's A/C stops blowing cold air, the cause can be low refrigerant, a worn part or something as simple as a clogged cabin air filter. How the air feels helps narrow it down, but only an inspection can confirm the cause. Newby's <a href=\"https://www.newbysautomotive.com/services/ac-heating\">A/C and heating service</a> in Henderson includes an A/C performance check.</p>\n<aside><p><strong>Key takeaways</strong></p>\n<ul>\n<li>Warm air, weak airflow, noise and odor can point to different parts of the system, so note which one you have.</li>\n<li>Toyota's A/C guide lists low refrigerant, a dirty condenser, a faulty compressor and a clogged cabin air filter among the possible causes.</li>\n<li>Low refrigerant is generally caused by a leak. The EPA says topping off or recharging should improve cooling but does not permanently fix a leak.</li>\n<li>Check your owner's manual first. It may show where the cabin air filter is and how often to check it, though not every vehicle's manual does. Consult it for vehicle-specific guidance.</li>\n<li>Do not try to add refrigerant yourself. Have a technician check it.</li>\n</ul></aside>\n<h2 id=\"what-does-the-way-your-ac-fails-tell-you\">What does the way your A/C fails tell you?</h2>\n<p>The symptom narrows the list of suspects. Use this table as a starting point for the conversation with your technician, not as a diagnosis.</p>\n<table>\n<thead>\n<tr>\n  <th>What you notice</th>\n  <th>Possible areas to check</th>\n  <th>Source</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n  <td>Warm air from the vents</td>\n  <td>Low refrigerant (generally from a leak), a dirty or clogged condenser, a faulty compressor</td>\n  <td>Toyota</td>\n</tr>\n<tr>\n  <td>Weak airflow, even if the air is cool</td>\n  <td>A dirty or clogged cabin air filter, a blower motor or fuse, a blend door actuator, damaged ductwork</td>\n  <td>Toyota</td>\n</tr>\n<tr>\n  <td>Loud noise when the A/C is on</td>\n  <td>A technician inspects. Toyota mentions listening for a loud noise when checking the compressor</td>\n  <td>Toyota; Newby's A/C page</td>\n</tr>\n<tr>\n  <td>Strange or musty smell when the A/C runs</td>\n  <td>A technician finds the source</td>\n  <td>Newby's A/C page</td>\n</tr>\n<tr>\n  <td>Heater not producing heat</td>\n  <td>Newby's lists heating system repair as its own service</td>\n  <td>Newby's A/C page</td>\n</tr>\n<tr>\n  <td>Water dripping under the car after use</td>\n  <td>Clear water from A/C condensation can be normal. An unfamiliar fluid, or a leak you are unsure about, needs an inspection</td>\n  <td>Toyota</td>\n</tr>\n</tbody>\n</table>\n<p>Toyota's guide, which is written for its own vehicles, is one automaker's view, and your own owner's manual takes priority for your car.</p>\n<figure><img src=\"/photos/blog/car-ac-not-blowing-cold-air-cabin-filter.webp\" width=\"2016\" height=\"1344\" alt=\"Car cabin air filter in its housing behind the open glove box\" loading=\"lazy\" style=\"width:100%;height:auto;border-radius:1rem\" /><figcaption style=\"font-size:0.875rem\">Illustration of a cabin air filter in its housing behind the glove box.</figcaption></figure>\n<h2 id=\"what-can-cause-warm-air\">What can cause warm air?</h2>\n<p>Warm air usually means the system is not removing heat from the cabin the way it should. Toyota's A/C troubleshooting page names low refrigerant, a dirty or clogged condenser and a faulty compressor as causes of poor cooling, along with a dirty cabin air filter.</p>\n<p><strong>Low refrigerant.</strong> Toyota says this is generally caused by a leak that needs to be located and repaired. Leaks can occur near the condenser or around O-rings, seals, fittings and hoses. The EPA adds that technicians can identify refrigerant leaks most of the time but may have difficulty locating small leaks.</p>\n<p><strong>A dirty or clogged condenser.</strong> Toyota says dirt or debris on the condenser can affect heat transfer and airflow, reducing cooling power.</p>\n<p><strong>A faulty compressor.</strong> The compressor circulates the refrigerant. Toyota says a failing one cannot do its job and may lead to ineffective cooling.</p>\n<p>Newby's A/C and heating page lists the parts the shop services in this system: refrigerant, compressor, evaporator, condenser, blower and controls.</p>\n<h2 id=\"what-if-the-air-is-cool-but-weak\">What if the air is cool but weak?</h2>\n<p>Weak airflow points away from refrigerant and toward the path the air takes to reach you. Toyota says a clogged or very dirty cabin air filter can restrict airflow from the vents, and that a worn blower motor, a blown fuse, a blend door actuator problem or damaged ductwork can also cause airflow problems.</p>\n<p>Your owner's manual is the first place to look for vehicle-specific guidance on the cabin air filter, although it may not show the location or interval for every vehicle. Toyota's page says the filter can be in several locations, including the glove box, depending on the vehicle, and that the maintenance schedule or manual gives the checking interval. Toyota adds that dusty areas and heavy traffic may call for earlier replacement.</p>\n<p>If the filter looks fine, or the airflow is still weak after you replace it, that is a reason for an inspection, not for guessing.</p>\n<h2 id=\"does-a-recharge-fix-it\">Does a recharge fix it?</h2>\n<p>Not by itself if there is a leak. The EPA says topping off or recharging a system should improve cooling the passenger compartment, but neither service permanently fixes refrigerant leaks. If done properly, repairing or replacing leaking components will provide longer-lasting benefits.</p>\n<p>The EPA also explains that technicians cannot tell how much refrigerant is in your system when you arrive. In a top-off they must guess how much to add, and undercharging or overcharging both impair performance. In an evacuation and recharge, the refrigerant is recovered, recycled and recharged into the system, with any needed replacement refrigerant added, so the technician can add the precise amount the manufacturer recommends. A recharge does not always fix a cooling problem, so the cause still needs to be found. Our <a href=\"https://www.newbysautomotive.com/car-care-tips/car-ac-recharge-cost\">A/C recharge cost guide</a> explains how these services differ.</p>\n<h2 id=\"why-not-add-refrigerant-yourself\">Why not add refrigerant yourself?</h2>\n<p>Refrigerant is not a do-it-yourself product, and the rules for servicing are strict. Toyota recommends having a professional check the refrigerant level, in part to prevent accidental release, which can cause skin damage because of the extremely cold temperature. The EPA says anyone who works on a vehicle A/C system for payment must be certified under section 609 of the Clean Air Act and use approved refrigerant handling equipment.</p>\n<figure><img src=\"/photos/blog/car-ac-not-blowing-cold-air-service-port.webp\" width=\"2016\" height=\"1344\" alt=\"Gloved hands connecting a blue A/C service hose to a car&#x27;s refrigerant line\" loading=\"lazy\" style=\"width:100%;height:auto;border-radius:1rem\" /><figcaption style=\"font-size:0.875rem\">Illustration of a technician connecting an A/C service hose.</figcaption></figure>\n<h2 id=\"what-should-you-tell-the-shop\">What should you tell the shop?</h2>\n<p>A clear description helps the technician plan the inspection before any work begins. Before you call, note:</p>\n<ul>\n<li>Whether the air is warm all the time, warm only some of the time, or cool but weak.</li>\n<li>Any noise when the A/C starts, and any odor from the vents.</li>\n<li>When the problem started and whether anything changed beforehand.</li>\n<li>Your vehicle's year, make and model.</li>\n<li>Whether the heater works.</li>\n</ul>\n<p>Ask what the inspection covers and what happens if a leak is found, so you can compare the answers.</p>\n<h2 id=\"frequently-asked-questions\">Frequently asked questions</h2>\n<h3>Why is my car A/C blowing warm air?</h3>\n<p>Toyota lists low refrigerant, a dirty condenser and a faulty compressor among the causes. A technician has to inspect the system to know which one applies.</p>\n<h3>Is water dripping under my car after I use the A/C normal?</h3>\n<p>Clear water dripping under the vehicle after the A/C has run can be normal condensation, according to Toyota. Other leaks from the A/C are not considered normal. If the fluid looks or smells unfamiliar, or you are not sure what is leaking, have it inspected rather than assuming it is harmless.</p>\n<h3>Will a recharge fix my A/C?</h3>\n<p>It may improve cooling, but the EPA says neither a top-off nor a recharge permanently fixes a refrigerant leak. Repairing or replacing leaking components provides longer-lasting benefits.</p>\n<h3>Can I fix weak airflow myself?</h3>\n<p>You may be able to check the cabin air filter by following your owner's manual, if it covers your vehicle. If that does not fix it, have the system inspected.</p>\n<h2 id=\"get-your-ac-checked-in-henderson\">Get your A/C checked in Henderson</h2>\n<p>If your A/C is blowing warm or weak air, making noise or giving off an odor, call Newby's Automotive Center at <a href=\"tel:+17028979667\">(702) 897-9667</a> or <a href=\"https://www.newbysautomotive.com/contact\">request an appointment</a>. The appointment form offers drop-off and wait options, and your request is confirmed by the shop. For background on keeping the system healthy, read how <a href=\"https://www.newbysautomotive.com/car-care-tips/how-air-conditioning-service-prevents-system-damage\">air conditioning service helps prevent system damage</a>.</p>\n<h2 id=\"sources\">Sources</h2>\n<ul>\n<li>Toyota. Troubleshooting Common Car AC Issues. <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.toyota.com/knowledge-center/car-maintenance/common-car-ac-issues\">https://www.toyota.com/knowledge-center/car-maintenance/common-car-ac-issues</a> (retrieved 2026-10-31)</li>\n<li>U.S. Environmental Protection Agency. Options for Recharging Your Air Conditioner. <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.epa.gov/mvac/options-recharging-your-air-conditioner\">https://www.epa.gov/mvac/options-recharging-your-air-conditioner</a> (retrieved 2026-10-31)</li>\n<li>U.S. Environmental Protection Agency. Regulatory Requirements for MVAC System Servicing. <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.epa.gov/mvac/regulatory-requirements-mvac-system-servicing\">https://www.epa.gov/mvac/regulatory-requirements-mvac-system-servicing</a> (retrieved 2026-10-31)</li>\n<li>Newby's Automotive Center. A/C &amp; Heating Repair in Henderson, NV. <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.newbysautomotive.com/services/ac-heating\">https://www.newbysautomotive.com/services/ac-heating</a> (retrieved 2026-10-31)</li>\n</ul>\n",
+  "seoTitle": "Car AC Not Blowing Cold Air: Causes and Next Steps",
+  "seoDescription": "Car AC not blowing cold air? See what warm air, weak airflow, noise or odor can point to, what a recharge does and when to call a Henderson shop.",
+  "schemaType": "BlogPosting",
+  "faqs": [
+    {
+      "question": "Why is my car A/C blowing warm air?",
+      "answer": "Toyota lists low refrigerant, a dirty condenser and a faulty compressor among the causes. A technician has to inspect the system to know which one applies."
+    },
+    {
+      "question": "Is water dripping under my car after I use the A/C normal?",
+      "answer": "Clear water dripping under the vehicle after the A/C has run can be normal condensation, according to Toyota. Other leaks from the A/C are not considered normal. If the fluid looks or smells unfamiliar, or you are not sure what is leaking, have it inspected rather than assuming it is harmless."
+    },
+    {
+      "question": "Will a recharge fix my A/C?",
+      "answer": "It may improve cooling, but the EPA says neither a top-off nor a recharge permanently fixes a refrigerant leak. Repairing or replacing leaking components provides longer-lasting benefits."
+    },
+    {
+      "question": "Can I fix weak airflow myself?",
+      "answer": "You may be able to check the cabin air filter by following your owner's manual, if it covers your vehicle. If that does not fix it, have the system inspected."
+    }
+  ]
+},
+{
   "slug": "brake-pad-replacement-cost-henderson",
   "title": "Brake Pad Replacement Cost in Henderson, NV: What Affects the Price",
   "excerpt": "Learn what affects brake pad replacement cost in Henderson, NV, from pad type to rotors and calipers, and what to ask before you approve a brake estimate.",
